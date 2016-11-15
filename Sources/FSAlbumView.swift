@@ -82,11 +82,12 @@ final class FSAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDel
         
         // Sorting condition
         let options = PHFetchOptions()
+        options.predicate = NSPredicate(format: "mediaType != %d AND mediaType != %d", PHAssetMediaType.audio.rawValue, PHAssetMediaType.unknown.rawValue)
         options.sortDescriptors = [
             NSSortDescriptor(key: "creationDate", ascending: false)
         ]
-        
-        images = PHAsset.fetchAssets(with: .image, options: options)
+
+        images = PHAsset.fetchAssets(with: options)
         
         if images.count > 0 {
             
