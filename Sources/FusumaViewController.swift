@@ -293,6 +293,8 @@ public final class FusumaViewController: UIViewController {
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {
 
+
+
         if self.albumView.phAsset.mediaType == .video {
             PHImageManager.default().requestAVAsset(forVideo: self.albumView.phAsset, options: nil, resultHandler: { (asset, audioMix, info) in
                 DispatchQueue.main.async { [weak self] in
@@ -411,7 +413,9 @@ private extension FusumaViewController {
         self.mode = mode
         
         dishighlightButtons()
-        
+
+        doneButton.isHidden = !hasGalleryPermission
+
         switch mode {
         case .library:
             titleLabel.text = NSLocalizedString(fusumaCameraRollTitle, comment: fusumaCameraRollTitle)
@@ -434,7 +438,7 @@ private extension FusumaViewController {
             self.view.bringSubview(toFront: videoShotContainer)
             videoView.startCamera()
         }
-        doneButton.isHidden = !hasGalleryPermission
+
         self.view.bringSubview(toFront: menuView)
     }
     
