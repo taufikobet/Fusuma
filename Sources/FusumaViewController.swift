@@ -374,7 +374,7 @@ extension FusumaViewController: FSAlbumViewDelegate, FSCameraViewDelegate, FSVid
     func videoFinished(withFileURL fileURL: URL) {
 
         self.dismiss(animated: true, completion: {
-            delegate?.fusumaVideoCompleted(withFileURL: fileURL)
+            self.delegate?.fusumaVideoCompleted(withFileURL: fileURL)
         })
     }
     
