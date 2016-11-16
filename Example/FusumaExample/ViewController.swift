@@ -31,7 +31,7 @@ class ViewController: UIViewController, FusumaDelegate {
     @IBAction func showButtonPressed(_ sender: AnyObject) {
         // Show Fusuma
         let fusuma = FusumaViewController()
-        
+        fusuma.hasVideo = true
         //        fusumaCropImage = false
         
         fusuma.delegate = self
