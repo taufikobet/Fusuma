@@ -54,7 +54,8 @@ final class FSVideoCameraView: UIView {
         
         // AVCapture
         session = AVCaptureSession()
-        
+        session?.sessionPreset = AVCaptureSessionPreset640x480
+
         for device in AVCaptureDevice.devices() {
             
             if let device = device as? AVCaptureDevice , device.position == AVCaptureDevicePosition.back {
