@@ -24,7 +24,9 @@ final class FSVideoCameraView: UIView {
     
     var session: AVCaptureSession?
     var device: AVCaptureDevice?
+    var audioDevice: AVCaptureDevice?
     var videoInput: AVCaptureDeviceInput?
+    var audioInput: AVCaptureDeviceInput?
     var videoOutput: AVCaptureMovieFileOutput?
     var focusView: UIView?
     
@@ -63,14 +65,22 @@ final class FSVideoCameraView: UIView {
                 self.device = device
             }
         }
-        
+
+        for device in AVCaptureDevice.devices(withMediaType: AVMediaTypeAudio) {
+            if let device = device as? AVCaptureDevice {
+                self.audioDevice = device
+            }
+        }
+
         do {
-            
+
             if let session = session {
                 
                 videoInput = try AVCaptureDeviceInput(device: device)
+                audioInput = try AVCaptureDeviceInput(device: audioDevice)
                 
                 session.addInput(videoInput)
+                session.addInput(audioInput)
                 
                 videoOutput = AVCaptureMovieFileOutput()
                 let totalSeconds = 60.0 //Total Seconds of capture time
@@ -228,6 +238,13 @@ final class FSVideoCameraView: UIView {
                         videoInput = try AVCaptureDeviceInput(device: device)
                         session.addInput(videoInput)
                         
+                    }
+                }
+
+                for device in AVCaptureDevice.devices(withMediaType: AVMediaTypeAudio) {
+                    if let device = device as? AVCaptureDevice {
+                        audioInput = try AVCaptureDeviceInput(device: device)
+                        session.addInput(audioInput)
                     }
                 }
                 
