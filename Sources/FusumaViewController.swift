@@ -78,7 +78,7 @@ public final class FusumaViewController: UIViewController {
         case video
     }
 
-    public var hasVideo = false
+    public var hasVideo:Bool = false
 
     var mode: Mode = .camera
     public var modeOrder: FusumaModeOrder = .libraryFirst
@@ -99,8 +99,14 @@ public final class FusumaViewController: UIViewController {
     @IBOutlet var libraryFirstConstraints: [NSLayoutConstraint]!
     @IBOutlet var cameraFirstConstraints: [NSLayoutConstraint]!
     
-    lazy var albumView  = FSAlbumView.instance()
-    lazy var cameraView = FSCameraView.instance()
+    lazy var albumView:FSAlbumView = {
+        return FSAlbumView.instance(hasVideo: self.hasVideo)
+    }()
+
+    lazy var cameraView:FSCameraView  = {
+        return FSCameraView.instance()
+    }()
+    
     lazy var videoView = FSVideoCameraView.instance()
 
     fileprivate var hasGalleryPermission: Bool {

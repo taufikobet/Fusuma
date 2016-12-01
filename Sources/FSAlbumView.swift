@@ -46,10 +46,13 @@ final class FSAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDel
     var cropBottomY: CGFloat  = 0.0
     var dragStartPos: CGPoint = CGPoint.zero
     let dragDiff: CGFloat     = 20.0
+
+    var hasVideo:Bool = false
     
-    static func instance() -> FSAlbumView {
-        
-        return UINib(nibName: "FSAlbumView", bundle: Bundle(for: self.classForCoder())).instantiate(withOwner: self, options: nil)[0] as! FSAlbumView
+    static func instance(hasVideo: Bool) -> FSAlbumView {
+        let albumView = UINib(nibName: "FSAlbumView", bundle: Bundle(for: self.classForCoder())).instantiate(withOwner: self, options: nil)[0] as! FSAlbumView
+        albumView.hasVideo = hasVideo
+        return albumView
     }
     
     func initialize() {
@@ -80,15 +83,23 @@ final class FSAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDel
         // Never load photos Unless the user allows to access to photo album
         checkPhotoAuth()
         
-        // Sorting condition
-        let options = PHFetchOptions()
-        options.predicate = NSPredicate(format: "mediaType != %d AND mediaType != %d", PHAssetMediaType.audio.rawValue, PHAssetMediaType.unknown.rawValue)
-        options.sortDescriptors = [
-            NSSortDescriptor(key: "creationDate", ascending: false)
-        ]
+        if hasVideo {
+            let options = PHFetchOptions()
+            options.predicate = NSPredicate(format: "mediaType != %d AND mediaType != %d", PHAssetMediaType.audio.rawValue, PHAssetMediaType.unknown.rawValue)
+            options.sortDescriptors = [
+                NSSortDescriptor(key: "creationDate", ascending: false)
+            ]
 
-        images = PHAsset.fetchAssets(with: options)
-        
+            images = PHAsset.fetchAssets(with: options)
+        } else {
+            let options = PHFetchOptions()
+            options.sortDescriptors = [
+                NSSortDescriptor(key: "creationDate", ascending: false)
+            ]
+
+            images = PHAsset.fetchAssets(with: .image, options: options)
+        }
+
         if images.count > 0 {
             
             changeImage(images[0])
