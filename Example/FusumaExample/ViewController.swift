@@ -49,7 +49,12 @@ class ViewController: UIViewController, FusumaDelegate {
         print("video completed and output to file: \(fileURL)")
         self.fileUrlLabel.text = "file output to: \(fileURL.absoluteString)"
     }
-    
+
+    func fusumaVideoCaptured(withFileURL fileURL: URL) {
+        print("video completed and output to file: \(fileURL)")
+        self.fileUrlLabel.text = "file output to: \(fileURL.absoluteString)"
+    }
+
     func fusumaDismissedWithImage(_ image: UIImage) {
         
         print("Called just after dismissed FusumaViewController")

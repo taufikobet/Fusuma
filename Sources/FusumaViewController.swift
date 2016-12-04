@@ -34,6 +34,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     func fusumaImageSelected(_ image: UIImage)
     @objc optional func fusumaDismissedWithImage(_ image: UIImage)
     func fusumaVideoCompleted(withFileURL fileURL: URL)
+    func fusumaVideoCaptured(withFileURL fileURL: URL)
     func fusumaCameraRollUnauthorized()
     
     @objc optional func fusumaClosed()
@@ -382,7 +383,7 @@ extension FusumaViewController: FSAlbumViewDelegate, FSCameraViewDelegate, FSVid
     func videoFinished(withFileURL fileURL: URL) {
 
         self.dismiss(animated: true, completion: {
-            self.delegate?.fusumaVideoCompleted(withFileURL: fileURL)
+            self.delegate?.fusumaVideoCaptured(withFileURL: fileURL)
         })
     }
     
