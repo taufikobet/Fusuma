@@ -267,20 +267,22 @@ final class FSVideoCameraView: UIView {
             if let device = device {
                 
                 try device.lockForConfiguration()
-                
-                let mode = device.flashMode
-                
-                if mode == AVCaptureFlashMode.off {
-                    
-                    device.flashMode = AVCaptureFlashMode.on
-                    flashButton.setImage(flashOnImage, for: UIControlState())
-                    
-                } else if mode == AVCaptureFlashMode.on {
-                    
-                    device.flashMode = AVCaptureFlashMode.off
-                    flashButton.setImage(flashOffImage, for: UIControlState())
+
+                if device.hasFlash {
+                    let mode = device.flashMode
+
+                    if mode == AVCaptureFlashMode.off {
+
+                        device.flashMode = AVCaptureFlashMode.on
+                        flashButton.setImage(flashOnImage, for: UIControlState())
+
+                    } else if mode == AVCaptureFlashMode.on {
+
+                        device.flashMode = AVCaptureFlashMode.off
+                        flashButton.setImage(flashOffImage, for: UIControlState())
+                    }
                 }
-                
+
                 device.unlockForConfiguration()
                 
             }
@@ -367,9 +369,11 @@ extension FSVideoCameraView {
             if let device = device {
                 
                 try device.lockForConfiguration()
-                
-                device.flashMode = AVCaptureFlashMode.off
-                flashButton.setImage(flashOffImage, for: UIControlState())
+
+                if device.hasFlash {
+                    device.flashMode = AVCaptureFlashMode.off
+                    flashButton.setImage(flashOffImage, for: UIControlState())
+                }
                 
                 device.unlockForConfiguration()
                 
