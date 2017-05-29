@@ -24,10 +24,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		7646EDD969177463E6D60F4F /* Pods_Fusuma_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 556A7EC85EF582AB1B371A93 /* Pods_Fusuma_Tests.framework */; };
 		B412D2081C9C3BDD00BFDE84 /* FSVideoCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B412D2071C9C3BDD00BFDE84 /* FSVideoCameraView.swift */; };
 		B412D20C1C9C3F5400BFDE84 /* FSVideoCameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B412D20B1C9C3F5400BFDE84 /* FSVideoCameraView.xib */; };
-		B8F772435E5CB85FC9150D53 /* Pods_Fusuma_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFF7D20EACE6B77580D327E /* Pods_Fusuma_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +40,7 @@
 
 /* Begin PBXFileReference section */
 		08E0D851317443B93493DCEB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		2B0C0B39D284930A8DCC1030 /* Pods-Fusuma_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fusuma_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fusuma_Tests/Pods-Fusuma_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3A41D50C0796FDBA21A7D391 /* Fusuma.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Fusuma.podspec; path = ../Fusuma.podspec; sourceTree = "<group>"; };
-		3F0C6EA79F7B2F5497CCFB5D /* Pods-Fusuma_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fusuma_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fusuma_Example/Pods-Fusuma_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		438EEAF066FAD18D591BBD1B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5285CC3C1C5E319E0070B639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		529368701C5E2DE600370B6C /* FSAlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSAlbumView.swift; sourceTree = "<group>"; };
@@ -57,7 +53,6 @@
 		529368771C5E2DE600370B6C /* FSImageCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSImageCropView.swift; sourceTree = "<group>"; };
 		529368781C5E2DE600370B6C /* FusumaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FusumaViewController.swift; sourceTree = "<group>"; };
 		529368791C5E2DE600370B6C /* FusumaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FusumaViewController.xib; sourceTree = "<group>"; };
-		556A7EC85EF582AB1B371A93 /* Pods_Fusuma_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fusuma_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* Fusuma_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fusuma_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,9 +63,6 @@
 		607FACE51AFB9204008FA782 /* Fusuma_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Fusuma_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6AFF7D20EACE6B77580D327E /* Pods_Fusuma_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fusuma_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7AE1105051B1337110ECAA2B /* Pods-Fusuma_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fusuma_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fusuma_Example/Pods-Fusuma_Example.release.xcconfig"; sourceTree = "<group>"; };
-		9B7C47C5623DBE5CE9204C16 /* Pods-Fusuma_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fusuma_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fusuma_Tests/Pods-Fusuma_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B412D2071C9C3BDD00BFDE84 /* FSVideoCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSVideoCameraView.swift; sourceTree = "<group>"; };
 		B412D20B1C9C3F5400BFDE84 /* FSVideoCameraView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSVideoCameraView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8F772435E5CB85FC9150D53 /* Pods_Fusuma_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7646EDD969177463E6D60F4F /* Pods_Fusuma_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,17 +106,6 @@
 			path = ../Classes;
 			sourceTree = "<group>";
 		};
-		58DBA25892D73B58D5E2FE56 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3F0C6EA79F7B2F5497CCFB5D /* Pods-Fusuma_Example.debug.xcconfig */,
-				7AE1105051B1337110ECAA2B /* Pods-Fusuma_Example.release.xcconfig */,
-				9B7C47C5623DBE5CE9204C16 /* Pods-Fusuma_Tests.debug.xcconfig */,
-				2B0C0B39D284930A8DCC1030 /* Pods-Fusuma_Tests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -135,8 +114,6 @@
 				607FACD21AFB9204008FA782 /* Example */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				58DBA25892D73B58D5E2FE56 /* Pods */,
-				BAC9706FF85626CA73D1F67B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,15 +175,6 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		BAC9706FF85626CA73D1F67B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6AFF7D20EACE6B77580D327E /* Pods_Fusuma_Example.framework */,
-				556A7EC85EF582AB1B371A93 /* Pods_Fusuma_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,12 +182,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Fusuma_Example" */;
 			buildPhases = (
-				423DD690BB4CE2E02BB3A904 /* Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				32FB599DFD77DC764D986F34 /* Embed Pods Frameworks */,
-				8181A475E88DEFE4F7A19A06 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -234,12 +199,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Fusuma_Tests" */;
 			buildPhases = (
-				5235198FFB5FC6FAEAD59D38 /* Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				819C76B409AB060069A15865 /* Embed Pods Frameworks */,
-				E4D1273EA9062C659F5ADA0B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,99 +276,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		32FB599DFD77DC764D986F34 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fusuma_Example/Pods-Fusuma_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		423DD690BB4CE2E02BB3A904 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5235198FFB5FC6FAEAD59D38 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8181A475E88DEFE4F7A19A06 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fusuma_Example/Pods-Fusuma_Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		819C76B409AB060069A15865 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fusuma_Tests/Pods-Fusuma_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E4D1273EA9062C659F5ADA0B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fusuma_Tests/Pods-Fusuma_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		607FACCC1AFB9204008FA782 /* Sources */ = {
@@ -547,7 +416,6 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F0C6EA79F7B2F5497CCFB5D /* Pods-Fusuma_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Fusuma/Info.plist;
@@ -561,7 +429,6 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AE1105051B1337110ECAA2B /* Pods-Fusuma_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Fusuma/Info.plist;
@@ -575,7 +442,6 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B7C47C5623DBE5CE9204C16 /* Pods-Fusuma_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -596,7 +462,6 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B0C0B39D284930A8DCC1030 /* Pods-Fusuma_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
