@@ -1,5 +1,7 @@
 PODS:
-  - Fusuma (1.0.0)
+  - Fusuma (1.0.0):
+    - MZTimerLabel
+  - MZTimerLabel (0.5.4)
 
 DEPENDENCIES:
   - Fusuma (from `../`)
@@ -9,7 +11,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Fusuma: 256315ea7daed298f246f1ba5e49700bc664dd93
+  Fusuma: 253411b1206d441298ed73f05e682e676413cbf0
+  MZTimerLabel: cd9bfb9304540ef2a9e163384fca9c978f0dbf83
 
 PODFILE CHECKSUM: 2f7e07cad453f43e29551f2126df2a6419ca8f61
 

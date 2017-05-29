@@ -10,4 +10,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'Sources/**/*.swift'
   s.resources    = ['Sources/Assets.xcassets', 'Sources/**/*.xib']
+  s.dependency 'MZTimerLabel'
 end
