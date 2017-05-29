@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import MZTimerLabel
 
 @objc protocol FSVideoCameraViewDelegate: class {
     func videoFinished(withFileURL fileURL: URL)
