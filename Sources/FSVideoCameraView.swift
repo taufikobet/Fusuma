@@ -17,7 +17,7 @@ import MZTimerLabel
 final class FSVideoCameraView: UIView {
 
     @IBOutlet weak var previewViewContainer: UIView!
-    @IBOutlet weak var shotButton: UIButton!
+    @IBOutlet weak var shotButton: CameraButton!
     @IBOutlet weak var flashButton: UIButton!
     @IBOutlet weak var flipButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
@@ -134,15 +134,12 @@ final class FSVideoCameraView: UIView {
         if(fusumaTintIcons) {
             flashButton.tintColor = fusumaBaseTintColor
             flipButton.tintColor  = fusumaBaseTintColor
-            shotButton.tintColor  = fusumaBaseTintColor
-            
+
             flashButton.setImage(flashOffImage?.withRenderingMode(.alwaysTemplate), for: UIControlState())
             flipButton.setImage(flipImage?.withRenderingMode(.alwaysTemplate), for: UIControlState())
-            shotButton.setImage(videoStartImage?.withRenderingMode(.alwaysTemplate), for: UIControlState())
         } else {
             flashButton.setImage(flashOffImage, for: UIControlState())
             flipButton.setImage(flipImage, for: UIControlState())
-            shotButton.setImage(videoStartImage, for: UIControlState())
         }
         
         flashConfiguration()
@@ -211,7 +208,6 @@ final class FSVideoCameraView: UIView {
             mzTimerLabel.reset()
             stopAnimatingRecordIndicator()
         }
-        self.shotButton.setImage(shotImage, for: UIControlState())
         
         if self.isRecording {
             let outputPath = "\(NSTemporaryDirectory())output.mov"
