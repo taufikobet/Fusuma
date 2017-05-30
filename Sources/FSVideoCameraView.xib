@@ -77,6 +77,23 @@
                         <constraint firstAttribute="trailing" secondItem="yHq-QZ-jPz" secondAttribute="trailing" constant="15" id="x4Y-A2-snd"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spP-X4-MHn" userLabel="Label background">
+                    <rect key="frame" x="0.0" y="64" width="400" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czY-Rv-cHn">
+                            <rect key="frame" x="163" y="8.5" width="74" height="23"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.33344516871165641" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="FT2-zx-eum"/>
+                        <constraint firstItem="czY-Rv-cHn" firstAttribute="centerX" secondItem="spP-X4-MHn" secondAttribute="centerX" id="cLc-D8-guG"/>
+                        <constraint firstItem="czY-Rv-cHn" firstAttribute="centerY" secondItem="spP-X4-MHn" secondAttribute="centerY" id="lRY-Uq-CQq"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -88,7 +105,10 @@
                 <constraint firstAttribute="trailing" secondItem="Pce-h2-IiM" secondAttribute="trailing" id="Q5y-Te-Sjg"/>
                 <constraint firstItem="6gh-EB-weA" firstAttribute="top" secondItem="Pce-h2-IiM" secondAttribute="bottom" id="ZTi-0j-Q2P"/>
                 <constraint firstItem="0hK-pW-0DW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="ZtF-xP-XL4"/>
+                <constraint firstAttribute="trailing" secondItem="spP-X4-MHn" secondAttribute="trailing" id="acF-nH-Z9A"/>
+                <constraint firstItem="spP-X4-MHn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="nDp-mo-5Zm"/>
                 <constraint firstItem="Pce-h2-IiM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="oaX-Fc-nnw"/>
+                <constraint firstItem="spP-X4-MHn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rri-it-iyz"/>
                 <constraint firstItem="0hK-pW-0DW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="snf-T0-XlH"/>
                 <constraint firstAttribute="trailing" secondItem="0hK-pW-0DW" secondAttribute="trailing" id="syg-FP-hcI"/>
             </constraints>
@@ -98,6 +118,7 @@
                 <outlet property="flipButton" destination="oPV-fC-75T" id="J96-fz-NnG"/>
                 <outlet property="previewViewContainer" destination="0hK-pW-0DW" id="8bh-3S-jSb"/>
                 <outlet property="shotButton" destination="cpy-ro-bt6" id="SbF-vE-c2o"/>
+                <outlet property="timerLabel" destination="czY-Rv-cHn" id="JGG-Pu-UlD"/>
             </connections>
             <point key="canvasLocation" x="519" y="448"/>
         </view>

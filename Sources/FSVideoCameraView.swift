@@ -20,6 +20,11 @@ final class FSVideoCameraView: UIView {
     @IBOutlet weak var shotButton: UIButton!
     @IBOutlet weak var flashButton: UIButton!
     @IBOutlet weak var flipButton: UIButton!
+    @IBOutlet weak var timerLabel: UILabel!
+
+    var mzTimerLabel:MZTimerLabel {
+        return MZTimerLabel(label: timerLabel, andTimerType: MZTimerLabelTypeStopWatch)
+    }
     
     weak var delegate: FSVideoCameraViewDelegate? = nil
     
@@ -185,8 +190,11 @@ final class FSVideoCameraView: UIView {
         let shotImage: UIImage?
         if self.isRecording {
             shotImage = videoStopImage
+            mzTimerLabel.start()
         } else {
             shotImage = videoStartImage
+            mzTimerLabel.pause()
+            mzTimerLabel.reset()
         }
         self.shotButton.setImage(shotImage, for: UIControlState())
         
