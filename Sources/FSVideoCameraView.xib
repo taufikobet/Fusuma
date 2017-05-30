@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -13,10 +17,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hK-pW-0DW">
+                    <rect key="frame" x="0.0" y="50" width="400" height="550"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pce-h2-IiM" userLabel="Placeholder">
                     <rect key="frame" x="0.0" y="50" width="400" height="400"/>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="0hK-pW-0DW" secondAttribute="height" multiplier="1:1" id="EYm-IN-2Mh"/>
+                        <constraint firstAttribute="width" secondItem="Pce-h2-IiM" secondAttribute="height" multiplier="1:1" id="Rrq-wL-bWM"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gh-EB-weA">
@@ -59,7 +67,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.32687883435582821" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="cpy-ro-bt6" firstAttribute="centerX" secondItem="6gh-EB-weA" secondAttribute="centerX" id="CPa-UK-eV1"/>
                         <constraint firstItem="oPV-fC-75T" firstAttribute="centerY" secondItem="6gh-EB-weA" secondAttribute="centerY" id="D1d-s9-DBb"/>
@@ -70,15 +78,19 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="0hK-pW-0DW" secondAttribute="bottom" id="89Q-92-XKE"/>
                 <constraint firstItem="6gh-EB-weA" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8DC-7U-0Ht"/>
+                <constraint firstItem="Pce-h2-IiM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CRe-F6-71D"/>
                 <constraint firstAttribute="bottom" secondItem="6gh-EB-weA" secondAttribute="bottom" id="IOQ-4M-Rye"/>
                 <constraint firstAttribute="trailing" secondItem="6gh-EB-weA" secondAttribute="trailing" id="Lge-9D-s38"/>
+                <constraint firstAttribute="trailing" secondItem="Pce-h2-IiM" secondAttribute="trailing" id="Q5y-Te-Sjg"/>
+                <constraint firstItem="6gh-EB-weA" firstAttribute="top" secondItem="Pce-h2-IiM" secondAttribute="bottom" id="ZTi-0j-Q2P"/>
                 <constraint firstItem="0hK-pW-0DW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="ZtF-xP-XL4"/>
+                <constraint firstItem="Pce-h2-IiM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="oaX-Fc-nnw"/>
                 <constraint firstItem="0hK-pW-0DW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="snf-T0-XlH"/>
                 <constraint firstAttribute="trailing" secondItem="0hK-pW-0DW" secondAttribute="trailing" id="syg-FP-hcI"/>
-                <constraint firstItem="6gh-EB-weA" firstAttribute="top" secondItem="0hK-pW-0DW" secondAttribute="bottom" id="t3B-Bo-8p1"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
