@@ -21,6 +21,7 @@ final class FSVideoCameraView: UIView {
     @IBOutlet weak var flashButton: UIButton!
     @IBOutlet weak var flipButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var recordIndicator: UIView! 
 
     var mzTimerLabel:MZTimerLabel {
         return MZTimerLabel(label: timerLabel, andTimerType: MZTimerLabelTypeStopWatch)
@@ -179,6 +180,18 @@ final class FSVideoCameraView: UIView {
         
         self.toggleRecording()
     }
+
+    func startAnimatingRecordIndicator() {
+        recordIndicator.isHidden = false
+        UIView.animate(withDuration: 0.75, delay: 0.0, options: .repeat, animations: {
+            self.recordIndicator.alpha = 0.0
+        }, completion: nil)
+    }
+
+    func stopAnimatingRecordIndicator() {
+        recordIndicator.layer.removeAllAnimations()
+        recordIndicator.isHidden = true
+    }
     
     fileprivate func toggleRecording() {
         guard let videoOutput = videoOutput else {
@@ -191,10 +204,12 @@ final class FSVideoCameraView: UIView {
         if self.isRecording {
             shotImage = videoStopImage
             mzTimerLabel.start()
+            startAnimatingRecordIndicator()
         } else {
             shotImage = videoStartImage
             mzTimerLabel.pause()
             mzTimerLabel.reset()
+            stopAnimatingRecordIndicator()
         }
         self.shotButton.setImage(shotImage, for: UIControlState())
         

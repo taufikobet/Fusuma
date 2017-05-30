@@ -86,11 +86,26 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tq3-1A-M3n">
+                            <rect key="frame" x="147" y="17" width="8" height="8"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="8" id="AEy-hm-nHu"/>
+                                <constraint firstAttribute="width" constant="8" id="cZU-Ep-vvl"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.33344516871165641" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="FT2-zx-eum"/>
+                        <constraint firstItem="czY-Rv-cHn" firstAttribute="leading" secondItem="Tq3-1A-M3n" secondAttribute="trailing" constant="8" id="bYA-uH-f3j"/>
                         <constraint firstItem="czY-Rv-cHn" firstAttribute="centerX" secondItem="spP-X4-MHn" secondAttribute="centerX" id="cLc-D8-guG"/>
+                        <constraint firstItem="Tq3-1A-M3n" firstAttribute="centerY" secondItem="spP-X4-MHn" secondAttribute="centerY" constant="1" id="dtm-Xd-Ee2"/>
                         <constraint firstItem="czY-Rv-cHn" firstAttribute="centerY" secondItem="spP-X4-MHn" secondAttribute="centerY" id="lRY-Uq-CQq"/>
                     </constraints>
                 </view>
@@ -117,6 +132,7 @@
                 <outlet property="flashButton" destination="yHq-QZ-jPz" id="umV-Ve-W2b"/>
                 <outlet property="flipButton" destination="oPV-fC-75T" id="J96-fz-NnG"/>
                 <outlet property="previewViewContainer" destination="0hK-pW-0DW" id="8bh-3S-jSb"/>
+                <outlet property="recordIndicator" destination="Tq3-1A-M3n" id="gwQ-8b-yn0"/>
                 <outlet property="shotButton" destination="cpy-ro-bt6" id="SbF-vE-c2o"/>
                 <outlet property="timerLabel" destination="czY-Rv-cHn" id="JGG-Pu-UlD"/>
             </connections>
