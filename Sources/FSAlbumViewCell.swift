@@ -12,6 +12,8 @@ import Photos
 final class FSAlbumViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var durationLabelContainer:UIView!
+    @IBOutlet weak var durationLabel:UILabel!
     
     var image: UIImage? {
         

@@ -30,6 +30,13 @@ final class FSAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDel
     var previousPreheatRect: CGRect = .zero
     let cellSize = CGSize(width: 100, height: 100)
     var phAsset: PHAsset!
+    lazy var formatter:DateComponentsFormatter = {
+        let formatter = DateComponentsFormatter()
+        formatter.unitsStyle = .positional
+        formatter.allowedUnits = [.minute, .second]
+        formatter.zeroFormattingBehavior = [.pad]
+        return formatter
+    }()
     
     // Variables for calculating the position
     enum Direction {
@@ -260,6 +267,13 @@ final class FSAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDel
                     cell.image = result
                 }
                 
+        }
+
+        if asset.mediaType == .video {
+            cell.durationLabelContainer.isHidden = false
+            cell.durationLabel.text = formatter.string(from: asset.duration)
+        } else {
+            cell.durationLabelContainer.isHidden = true
         }
         
         return cell
