@@ -42,7 +42,7 @@
                                 <action selector="flipButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="tB8-SP-OGo"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpy-ro-bt6" customClass="CameraButton" customModule="FusumaExample">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpy-ro-bt6" customClass="CameraButton" customModule="Fusuma">
                             <rect key="frame" x="166" y="41" width="68" height="68"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="68" id="BsM-o7-FiY"/>
