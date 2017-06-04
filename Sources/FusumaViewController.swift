@@ -283,17 +283,17 @@ public final class FusumaViewController: UIViewController {
         })
     }
     
-    @IBAction func libraryButtonPressed(_ sender: UIButton) {
+    @IBAction public func libraryButtonPressed(_ sender: UIButton?) {
         
         changeMode(Mode.library)
     }
     
-    @IBAction func photoButtonPressed(_ sender: UIButton) {
+    @IBAction public func photoButtonPressed(_ sender: UIButton?) {
     
         changeMode(Mode.camera)
     }
     
-    @IBAction func videoButtonPressed(_ sender: UIButton) {
+    @IBAction public func videoButtonPressed(_ sender: UIButton?) {
         
         changeMode(Mode.video)
     }
