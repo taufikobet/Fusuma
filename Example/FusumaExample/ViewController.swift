@@ -53,6 +53,9 @@ class ViewController: UIViewController, FusumaDelegate {
     func fusumaVideoCaptured(withFileURL fileURL: URL) {
         print("video completed and output to file: \(fileURL)")
         self.fileUrlLabel.text = "file output to: \(fileURL.absoluteString)"
+        if UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(fileURL.path) {
+            UISaveVideoAtPathToSavedPhotosAlbum(fileURL.path, nil, nil, nil)
+        }
     }
 
     func fusumaDismissedWithImage(_ image: UIImage) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F90AD371FD9A2F100E66DA4 /* SDAVAssetExportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F90AD361FD9A2F100E66DA4 /* SDAVAssetExportSession.m */; };
 		4B8238C6E644BC8C268768E3 /* Pods_FusumaExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931CBBF17B8E964EC74210C8 /* Pods_FusumaExample.framework */; };
 		52412AC41CA61C9F0073C4BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52412AC31CA61C9F0073C4BE /* AppDelegate.swift */; };
 		52412AC61CA61C9F0073C4BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52412AC51CA61C9F0073C4BE /* ViewController.swift */; };
@@ -30,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F90AD341FD9A2F000E66DA4 /* FusumaExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FusumaExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		3F90AD351FD9A2F000E66DA4 /* SDAVAssetExportSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAVAssetExportSession.h; sourceTree = "<group>"; };
+		3F90AD361FD9A2F100E66DA4 /* SDAVAssetExportSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDAVAssetExportSession.m; sourceTree = "<group>"; };
 		52412AC01CA61C9F0073C4BE /* FusumaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FusumaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52412AC31CA61C9F0073C4BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52412AC51CA61C9F0073C4BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 		D77CA28D1CBBDEB300C4BAC4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3F90AD351FD9A2F000E66DA4 /* SDAVAssetExportSession.h */,
+				3F90AD361FD9A2F100E66DA4 /* SDAVAssetExportSession.m */,
 				B7F9E57D1EDD92CE00DCBE4D /* CameraButton.swift */,
 				D77CA28E1CBBDEB300C4BAC4 /* Assets.xcassets */,
 				D77CA28F1CBBDEB300C4BAC4 /* FSAlbumView.swift */,
@@ -134,6 +140,7 @@
 				D77CA2981CBBDEB300C4BAC4 /* FusumaViewController.xib */,
 				EDDC0B401D04FA14009135DB /* FSVideoCameraView.swift */,
 				EDDC0B411D04FA14009135DB /* FSVideoCameraView.xib */,
+				3F90AD341FD9A2F000E66DA4 /* FusumaExample-Bridging-Header.h */,
 			);
 			name = Sources;
 			path = ../../Sources;
@@ -175,6 +182,7 @@
 					52412ABF1CA61C9F0073C4BE = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 599SL32HL9;
+						LastSwiftMigration = 0920;
 					};
 				};
 			};
@@ -237,9 +245,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FusumaExample/Pods-FusumaExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Fusuma/Fusuma.framework",
+				"${BUILT_PRODUCTS_DIR}/MZTimerLabel/MZTimerLabel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fusuma.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MZTimerLabel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -252,13 +265,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FusumaExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -272,6 +288,7 @@
 				EDDC0B421D04FA14009135DB /* FSVideoCameraView.swift in Sources */,
 				B7F9E57E1EDD92CE00DCBE4D /* CameraButton.swift in Sources */,
 				D77CA29E1CBBDEB300C4BAC4 /* FSCameraView.swift in Sources */,
+				3F90AD371FD9A2F100E66DA4 /* SDAVAssetExportSession.m in Sources */,
 				D77CA29C1CBBDEB300C4BAC4 /* FSAlbumViewCell.swift in Sources */,
 				D77CA29A1CBBDEB300C4BAC4 /* FSAlbumView.swift in Sources */,
 				D77CA2A01CBBDEB300C4BAC4 /* FSConstants.swift in Sources */,
@@ -400,12 +417,15 @@
 			baseConfigurationReference = 79469C0FE8364E0E0C333EBB /* Pods-FusumaExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 599SL32HL9;
 				INFOPLIST_FILE = FusumaExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = me.ytakzk.FusumaExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "../Sources/FusumaExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -415,11 +435,13 @@
 			baseConfigurationReference = 626292F27306DCBA6E21C8F3 /* Pods-FusumaExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 599SL32HL9;
 				INFOPLIST_FILE = FusumaExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.ytakzk.FusumaExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "../Sources/FusumaExample-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

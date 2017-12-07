@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import MZTimerLabel
+import CoreMotion
 
 @objc protocol FSVideoCameraViewDelegate: class {
     func videoFinished(withFileURL fileURL: URL)
@@ -42,6 +43,8 @@ final class FSVideoCameraView: UIView {
     var videoStartImage: UIImage?
     var videoStopImage: UIImage?
 
+    let motionManager: CMMotionManager = CMMotionManager()
+    var videoOrientation:UIInterfaceOrientation = .portrait
     
     fileprivate var isRecording = false
     
@@ -143,8 +146,42 @@ final class FSVideoCameraView: UIView {
         }
         
         flashConfiguration()
-        
+        setupMotionManager()
         self.startCamera()
+    }
+    
+    func setupMotionManager() {
+        motionManager.deviceMotionUpdateInterval = 5.0
+        if motionManager.isAccelerometerAvailable{
+            let queue = OperationQueue.main
+            motionManager.startAccelerometerUpdates(to: queue, withHandler: {
+                [weak self]  data, error in
+                
+                guard let data = data else{
+                    return
+                }
+                let angle = (atan2(data.acceleration.y,data.acceleration.x))*180/M_PI;
+                
+                print(angle)
+                if(fabs(angle)<=45){
+                    self?.videoOrientation = .landscapeLeft
+                }else if((fabs(angle)>45)&&(fabs(angle)<135)){
+                    
+                    if(angle>0){
+                        self?.videoOrientation = .portraitUpsideDown
+                    } else {
+                        self?.videoOrientation = .portrait
+                        
+                    }
+                }else{
+                    self?.videoOrientation = .landscapeRight
+                    
+                }
+                
+                }
+            )
+        } else {
+        }
     }
     
     deinit {
@@ -159,7 +196,6 @@ final class FSVideoCameraView: UIView {
         if status == AVAuthorizationStatus.authorized {
             
             session?.startRunning()
-            
         } else if status == AVAuthorizationStatus.denied || status == AVAuthorizationStatus.restricted {
             
             session?.stopRunning()
@@ -176,6 +212,11 @@ final class FSVideoCameraView: UIView {
     @IBAction func shotButtonPressed(_ sender: UIButton) {
         
         self.toggleRecording()
+        
+        if self.isRecording {
+            motionManager.stopDeviceMotionUpdates()
+            motionManager.stopAccelerometerUpdates()
+        }
     }
 
     func startAnimatingRecordIndicator() {
@@ -325,7 +366,12 @@ extension FSVideoCameraView: AVCaptureFileOutputRecordingDelegate {
     
     func capture(_ captureOutput: AVCaptureFileOutput!, didFinishRecordingToOutputFileAt outputFileURL: URL!, fromConnections connections: [Any]!, error: Error!) {
         print("finished recording to: \(outputFileURL)")
-        self.delegate?.videoFinished(withFileURL: outputFileURL)
+                
+        exportVideo(withURL: outputFileURL, orientation: videoOrientation) { (url) in
+            if let url = url {
+                self.delegate?.videoFinished(withFileURL: url)
+            }
+        }
     }
     
 }
@@ -405,3 +451,96 @@ extension FSVideoCameraView {
         }
     }
 }
+
+extension FSVideoCameraView {
+    func exportVideo(withURL url: URL, orientation:UIInterfaceOrientation, completionHandler:@escaping (URL?)->()) {
+        let asset = AVURLAsset(url: url)
+        let exportSession = SDAVAssetExportSession(asset: asset)!
+        let outputPath = NSTemporaryDirectory().appending("temp.mov")
+        if FileManager.default.fileExists(atPath: outputPath) {
+            try! FileManager.default.removeItem(atPath: outputPath)
+        }
+        exportSession.outputURL = URL(fileURLWithPath: outputPath)
+        exportSession.outputFileType = AVFileTypeQuickTimeMovie
+//        exportSession.shouldOptimizeForNetworkUse = true
+        var size:CGSize = CGSize.zero
+        if let naturalSize = asset.tracks(withMediaType: AVMediaTypeVideo).first?.naturalSize,
+            let preferredTransform = asset.tracks(withMediaType: AVMediaTypeVideo).first?.preferredTransform
+        {
+            size = naturalSize
+            if isVideoRotated90_270(preferredTransform: preferredTransform) {
+                let flippedSize:CGSize = size
+                size.width = flippedSize.height
+                size.height = flippedSize.width
+            }
+        }
+        
+        exportSession.videoSettings = [
+            AVVideoCodecKey: AVVideoCodecH264,
+            
+            AVVideoWidthKey: size.width,
+            AVVideoHeightKey: size.height,
+            
+            AVVideoCompressionPropertiesKey: [
+                
+                AVVideoAverageBitRateKey: 1216000,
+                AVVideoProfileLevelKey: AVVideoProfileLevelH264High41,
+            ],
+        ]
+        
+        exportSession.audioSettings = [
+            AVFormatIDKey: NSNumber(value: Int32(kAudioFormatMPEG4AAC)),
+            AVNumberOfChannelsKey: 1,
+            AVSampleRateKey: 44100,
+            AVEncoderBitRateKey: 64000,
+        ]
+        
+        
+        exportSession.exportAsynchronously(with: orientation, completionHandler: {
+            DispatchQueue.main.async {
+                print(exportSession.status)
+                switch exportSession.status {
+                case .cancelled:
+                    print("cancelled")
+                case .failed:
+                    print("failed")
+                    completionHandler(nil)
+                case .unknown:
+                    print("unknown")
+                case .completed:
+                    if let outputURL = exportSession.outputURL {
+                        completionHandler(outputURL)
+                    }
+                default: break
+                }
+            }
+        })
+    }
+    
+    func isVideoRotated90_270(preferredTransform: CGAffineTransform) -> Bool {
+        
+        var isRotated90_270 = false
+        
+        let t: CGAffineTransform = preferredTransform
+        
+        if t.a == 0 && t.b == 1.0 && t.c == -1.0 && t.d == 0 {
+            isRotated90_270 = true
+        }
+        
+        if t.a == 0 && t.b == -1.0 && t.c == 1.0 && t.d == 0  {
+            isRotated90_270 = true
+        }
+        
+        if t.a == 1.0 && t.b == 0 && t.c == 0 && t.d == 1.0  {
+            isRotated90_270 = false
+        }
+        
+        if t.a == -1.0 && t.b == 0 && t.c == 0 && t.d == -1.0 {
+            isRotated90_270 = false
+        }
+        
+        return isRotated90_270
+    }
+}
+
+

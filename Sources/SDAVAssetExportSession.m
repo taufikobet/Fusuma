@@ -125,7 +125,7 @@
         //
         self.videoInput = [AVAssetWriterInput assetWriterInputWithMediaType:AVMediaTypeVideo outputSettings:self.videoSettings];
         self.videoInput.expectsMediaDataInRealTime = NO;
-        self.videoInput.transform = CGAffineTransformMakeRotation(-M_PI/2);
+        
         if ([self.writer canAddInput:self.videoInput])
         {
             [self.writer addInput:self.videoInput];
@@ -217,6 +217,184 @@
          }];
     }
 }
+
+- (void)exportAsynchronouslyWithOrientation:(UIInterfaceOrientation)orientation completionHandler:(void (^)())handler
+{
+    NSParameterAssert(handler != nil);
+    [self cancelExport];
+    self.completionHandler = handler;
+    
+    if (!self.outputURL)
+    {
+        _error = [NSError errorWithDomain:AVFoundationErrorDomain code:AVErrorExportFailed userInfo:@
+                  {
+                  NSLocalizedDescriptionKey: @"Output URL not set"
+                  }];
+        handler();
+        return;
+    }
+    
+    NSError *readerError;
+    self.reader = [AVAssetReader.alloc initWithAsset:self.asset error:&readerError];
+    if (readerError)
+    {
+        _error = readerError;
+        handler();
+        return;
+    }
+    
+    NSError *writerError;
+    self.writer = [AVAssetWriter assetWriterWithURL:self.outputURL fileType:self.outputFileType error:&writerError];
+    if (writerError)
+    {
+        _error = writerError;
+        handler();
+        return;
+    }
+    
+    self.reader.timeRange = self.timeRange;
+    self.writer.shouldOptimizeForNetworkUse = self.shouldOptimizeForNetworkUse;
+    self.writer.metadata = self.metadata;
+    
+    NSArray *videoTracks = [self.asset tracksWithMediaType:AVMediaTypeVideo];
+    
+    
+    if (CMTIME_IS_VALID(self.timeRange.duration) && !CMTIME_IS_POSITIVE_INFINITY(self.timeRange.duration))
+    {
+        duration = CMTimeGetSeconds(self.timeRange.duration);
+    }
+    else
+    {
+        duration = CMTimeGetSeconds(self.asset.duration);
+    }
+    //
+    // Video output
+    //
+    if (videoTracks.count > 0) {
+        self.videoOutput = [AVAssetReaderVideoCompositionOutput assetReaderVideoCompositionOutputWithVideoTracks:videoTracks videoSettings:self.videoInputSettings];
+        self.videoOutput.alwaysCopiesSampleData = NO;
+        if (self.videoComposition)
+        {
+            self.videoOutput.videoComposition = self.videoComposition;
+        }
+        else
+        {
+            self.videoOutput.videoComposition = [self buildDefaultVideoComposition];
+        }
+        if ([self.reader canAddOutput:self.videoOutput])
+        {
+            [self.reader addOutput:self.videoOutput];
+        }
+        
+        //
+        // Video input
+        //
+        self.videoInput = [AVAssetWriterInput assetWriterInputWithMediaType:AVMediaTypeVideo outputSettings:self.videoSettings];
+        self.videoInput.expectsMediaDataInRealTime = NO;
+        
+        switch (orientation) {
+            case UIInterfaceOrientationLandscapeRight:
+                self.videoInput.transform = CGAffineTransformMakeRotation(-M_PI/2);
+                break;
+            case UIInterfaceOrientationLandscapeLeft:
+                self.videoInput.transform = CGAffineTransformMakeRotation(M_PI/2);
+                break;
+            default:
+                break;
+        }
+        
+        if ([self.writer canAddInput:self.videoInput])
+        {
+            [self.writer addInput:self.videoInput];
+        }
+        NSDictionary *pixelBufferAttributes = @
+        {
+            (id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_32BGRA),
+            (id)kCVPixelBufferWidthKey: @(self.videoOutput.videoComposition.renderSize.width),
+            (id)kCVPixelBufferHeightKey: @(self.videoOutput.videoComposition.renderSize.height),
+            @"IOSurfaceOpenGLESTextureCompatibility": @YES,
+            @"IOSurfaceOpenGLESFBOCompatibility": @YES,
+        };
+        self.videoPixelBufferAdaptor = [AVAssetWriterInputPixelBufferAdaptor assetWriterInputPixelBufferAdaptorWithAssetWriterInput:self.videoInput sourcePixelBufferAttributes:pixelBufferAttributes];
+    }
+    
+    //
+    //Audio output
+    //
+    NSArray *audioTracks = [self.asset tracksWithMediaType:AVMediaTypeAudio];
+    if (audioTracks.count > 0) {
+        self.audioOutput = [AVAssetReaderAudioMixOutput assetReaderAudioMixOutputWithAudioTracks:audioTracks audioSettings:nil];
+        self.audioOutput.alwaysCopiesSampleData = NO;
+        self.audioOutput.audioMix = self.audioMix;
+        if ([self.reader canAddOutput:self.audioOutput])
+        {
+            [self.reader addOutput:self.audioOutput];
+        }
+    } else {
+        // Just in case this gets reused
+        self.audioOutput = nil;
+    }
+    
+    //
+    // Audio input
+    //
+    if (self.audioOutput) {
+        self.audioInput = [AVAssetWriterInput assetWriterInputWithMediaType:AVMediaTypeAudio outputSettings:self.audioSettings];
+        self.audioInput.expectsMediaDataInRealTime = NO;
+        if ([self.writer canAddInput:self.audioInput])
+        {
+            [self.writer addInput:self.audioInput];
+        }
+    }
+    
+    [self.writer startWriting];
+    [self.reader startReading];
+    [self.writer startSessionAtSourceTime:self.timeRange.start];
+    
+    __block BOOL videoCompleted = NO;
+    __block BOOL audioCompleted = NO;
+    __weak typeof(self) wself = self;
+    self.inputQueue = dispatch_queue_create("VideoEncoderInputQueue", DISPATCH_QUEUE_SERIAL);
+    if (videoTracks.count > 0) {
+        [self.videoInput requestMediaDataWhenReadyOnQueue:self.inputQueue usingBlock:^
+         {
+             if (![wself encodeReadySamplesFromOutput:wself.videoOutput toInput:wself.videoInput])
+             {
+                 @synchronized(wself)
+                 {
+                     videoCompleted = YES;
+                     if (audioCompleted)
+                     {
+                         [wself finish];
+                     }
+                 }
+             }
+         }];
+    }
+    else {
+        videoCompleted = YES;
+    }
+    
+    if (!self.audioOutput) {
+        audioCompleted = YES;
+    } else {
+        [self.audioInput requestMediaDataWhenReadyOnQueue:self.inputQueue usingBlock:^
+         {
+             if (![wself encodeReadySamplesFromOutput:wself.audioOutput toInput:wself.audioInput])
+             {
+                 @synchronized(wself)
+                 {
+                     audioCompleted = YES;
+                     if (videoCompleted)
+                     {
+                         [wself finish];
+                     }
+                 }
+             }
+         }];
+    }
+}
+
 
 - (BOOL)encodeReadySamplesFromOutput:(AVAssetReaderOutput *)output toInput:(AVAssetWriterInput *)input
 {

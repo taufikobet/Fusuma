@@ -15,9 +15,14 @@
     "ios": "8.0"
   },
   "requires_arc": true,
-  "source_files": "Sources/**/*.swift",
+  "source_files": "Sources/**/*.{h,m,swift}",
   "resources": [
     "Sources/Assets.xcassets",
     "Sources/**/*.xib"
-  ]
+  ],
+  "dependencies": {
+    "MZTimerLabel": [
+
+    ]
+  }
 }
