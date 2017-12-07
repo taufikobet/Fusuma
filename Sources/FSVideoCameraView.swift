@@ -160,9 +160,7 @@ final class FSVideoCameraView: UIView {
                 guard let data = data else{
                     return
                 }
-                let angle = (atan2(data.acceleration.y,data.acceleration.x))*180/M_PI;
-                
-                print(angle)
+                let angle = (atan2(data.acceleration.y,data.acceleration.x))*180/M_PI;                
                 if(fabs(angle)<=45){
                     self?.videoOrientation = .landscapeLeft
                 }else if((fabs(angle)>45)&&(fabs(angle)<135)){
