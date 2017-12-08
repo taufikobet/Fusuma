@@ -305,10 +305,11 @@ public final class FusumaViewController: UIViewController {
         if self.albumView.phAsset.mediaType == .video {
             PHImageManager.default().requestAVAsset(forVideo: self.albumView.phAsset, options: nil, resultHandler: { (asset, audioMix, info) in
                 DispatchQueue.main.async { [weak self] in
-                    let urlAsset = asset as! AVURLAsset
-                    self?.dismiss(animated: true, completion: {
-                        self?.delegate?.fusumaVideoCompleted(withFileURL: urlAsset.url)
-                    })
+                    if let urlAsset = asset as? AVURLAsset {
+                        self?.dismiss(animated: true, completion: {
+                            self?.delegate?.fusumaVideoCompleted(withFileURL: urlAsset.url)
+                        })
+                    }
                 }
             })
         } else {
@@ -326,10 +327,10 @@ public final class FusumaViewController: UIViewController {
                 DispatchQueue.global(qos: .default).async(execute: {
 
                     let options = PHImageRequestOptions()
-                    options.deliveryMode = .highQualityFormat
+                    //options.deliveryMode = .highQualityFormat
                     options.isNetworkAccessAllowed = true
                     options.normalizedCropRect = cropRect
-                    options.resizeMode = .exact
+                    //options.resizeMode = .exact
 
                     let targetWidth = floor(CGFloat(self.albumView.phAsset.pixelWidth) * cropRect.width)
                     let targetHeight = floor(CGFloat(self.albumView.phAsset.pixelHeight) * cropRect.height)
@@ -341,13 +342,15 @@ public final class FusumaViewController: UIViewController {
                                                           contentMode: .aspectFill, options: options) {
                                                             result, info in
 
-                                                            DispatchQueue.main.async(execute: {
-                                                                self.delegate?.fusumaImageSelected(result!)
-
-                                                                self.dismiss(animated: true, completion: {
-                                                                    self.delegate?.fusumaDismissedWithImage?(result!)
+                                                            if let image = result {
+                                                                DispatchQueue.main.async(execute: {
+                                                                    self.delegate?.fusumaImageSelected(image)
+                                                                    
+                                                                    self.dismiss(animated: true, completion: {
+                                                                        self.delegate?.fusumaDismissedWithImage?(image)
+                                                                    })
                                                                 })
-                                                            })
+                                                            }
                     }
                 })
             } else {
