@@ -410,9 +410,10 @@ private extension FSAlbumView {
                     result, info in
                     
                     DispatchQueue.main.async(execute: {
-                        
-                        self.imageCropView.imageSize = CGSize(width: asset.pixelWidth, height: asset.pixelHeight)
-                        self.imageCropView.image = result
+                        if let image = result {
+                            self.imageCropView.imageSize = CGSize(width: asset.pixelWidth, height: asset.pixelHeight)
+                            self.imageCropView.image = image
+                        }
                     })
             }
         })
