@@ -300,17 +300,65 @@ public final class FusumaViewController: UIViewController {
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {
 
-
-
         if self.albumView.phAsset.mediaType == .video {
-            PHImageManager.default().requestAVAsset(forVideo: self.albumView.phAsset, options: nil, resultHandler: { (asset, audioMix, info) in
-                DispatchQueue.main.async { [weak self] in
-                    if let urlAsset = asset as? AVURLAsset {
-                        self?.dismiss(animated: true, completion: {
-                            self?.delegate?.fusumaVideoCompleted(withFileURL: urlAsset.url)
-                        })
+            let imageManager = PHImageManager.default()
+            let options = PHVideoRequestOptions()
+            var requestVideoID:PHImageRequestID?
+
+            options.isNetworkAccessAllowed = true
+            options.version = .current
+            options.deliveryMode = .automatic
+            
+            let alert = UIAlertController(title: "Downloading video from iCloud...", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
+                if let requestID = requestVideoID {
+                    imageManager.cancelImageRequest(requestID)
+                }
+            }))
+            present(alert, animated: true, completion: nil)
+            
+            options.progressHandler = { [weak self] progress, error, stop, info in
+                if let error = error {
+                    alert.dismiss(animated: true) {
+                        let videoErrorAlert = UIAlertController(title: "Cannot Download Video", message: "There was an error downloading this video from iCloud Photo Library. Please try again later.", preferredStyle: .alert)
+                        videoErrorAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self?.present(videoErrorAlert, animated: true, completion: nil)
                     }
                 }
+            }
+            
+            requestVideoID = imageManager.requestExportSession(forVideo: self.albumView.phAsset, options: options, exportPreset: AVAssetExportPresetPassthrough, resultHandler: { [weak self] (session, dict) in
+                
+                guard let session = session else { return }
+                
+                let outputPath = NSTemporaryDirectory().appending("temp.mov")
+                if FileManager.default.fileExists(atPath: outputPath) {
+                    try! FileManager.default.removeItem(atPath: outputPath)
+                }
+                session.outputURL = URL(fileURLWithPath: outputPath)
+                session.outputFileType = AVFileTypeQuickTimeMovie
+                
+                session.exportAsynchronously(completionHandler: {
+                    DispatchQueue.main.async {
+                        switch session.status {
+                        case .cancelled:
+                            alert.dismiss(animated: true, completion: nil)
+                        case .failed:
+                            alert.dismiss(animated: true, completion: nil)
+                        case .unknown:
+                            alert.dismiss(animated: true, completion: nil)
+                        case .completed:
+                            alert.dismiss(animated: true) {
+                                if let outputURL = session.outputURL {
+                                    self?.dismiss(animated: true, completion: {
+                                        self?.delegate?.fusumaVideoCompleted(withFileURL: outputURL)
+                                    })
+                                }
+                            }
+                        default: break
+                        }
+                    }
+                })
             })
         } else {
             let view = albumView.imageCropView
