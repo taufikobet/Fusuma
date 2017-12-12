@@ -11,4 +11,5 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/**/*.{h,m,swift}'
   s.resources    = ['Sources/Assets.xcassets', 'Sources/**/*.xib']
   s.dependency 'MZTimerLabel'
+  s.dependency 'MBProgressHUD'
 end

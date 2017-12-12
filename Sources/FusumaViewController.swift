@@ -8,6 +8,8 @@
 
 import UIKit
 import Photos
+import MBProgressHUD
+
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
   switch (lhs, rhs) {
   case let (l?, r?):
@@ -115,6 +117,11 @@ public final class FusumaViewController: UIViewController {
     }
     
     public weak var delegate: FusumaDelegate? = nil
+    
+    var requestVideoID:PHImageRequestID?
+    let imageManager = PHImageManager.default()
+    let options = PHVideoRequestOptions()
+    var hud:MBProgressHUD?
     
     override public func loadView() {
         
@@ -301,25 +308,25 @@ public final class FusumaViewController: UIViewController {
     @IBAction func doneButtonPressed(_ sender: UIButton) {
 
         if self.albumView.phAsset.mediaType == .video {
-            let imageManager = PHImageManager.default()
-            let options = PHVideoRequestOptions()
-            var requestVideoID:PHImageRequestID?
 
             options.isNetworkAccessAllowed = true
             options.version = .current
             options.deliveryMode = .automatic
-            
-            let alert = UIAlertController(title: "Downloading video from iCloud...", message: nil, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
-                if let requestID = requestVideoID {
-                    imageManager.cancelImageRequest(requestID)
-                }
-            }))
-            present(alert, animated: true, completion: nil)
+
+            hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+            hud?.mode = .determinateHorizontalBar
+            hud?.label.text = "Downloading video from iCloud..."
+            hud?.button.setTitle("Cancel", for: .normal)
+            hud?.button.addTarget(self, action: #selector(cancelDownload), for: .touchUpInside)
             
             options.progressHandler = { [weak self] progress, error, stop, info in
-                if let error = error {
-                    alert.dismiss(animated: true) {
+                DispatchQueue.main.async {
+                    //print("download progress: " + "\(progress)")
+  
+                    self?.updateProgress(progress:Float(progress))
+                    
+                    if let _ = error {
+                        self?.hud?.hide(animated: true)
                         let videoErrorAlert = UIAlertController(title: "Cannot Download Video", message: "There was an error downloading this video from iCloud Photo Library. Please try again later.", preferredStyle: .alert)
                         videoErrorAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                         self?.present(videoErrorAlert, animated: true, completion: nil)
@@ -341,19 +348,15 @@ public final class FusumaViewController: UIViewController {
                 session.exportAsynchronously(completionHandler: {
                     DispatchQueue.main.async {
                         switch session.status {
-                        case .cancelled:
-                            alert.dismiss(animated: true, completion: nil)
-                        case .failed:
-                            alert.dismiss(animated: true, completion: nil)
-                        case .unknown:
-                            alert.dismiss(animated: true, completion: nil)
+                        case .cancelled, .failed, .unknown:
+                            self?.hud?.hide(animated: true)
                         case .completed:
-                            alert.dismiss(animated: true) {
-                                if let outputURL = session.outputURL {
-                                    self?.dismiss(animated: true, completion: {
-                                        self?.delegate?.fusumaVideoCompleted(withFileURL: outputURL)
-                                    })
-                                }
+                            self?.hud?.progress = 1.0
+                            self?.hud?.hide(animated: true)
+                            if let outputURL = session.outputURL {
+                                self?.dismiss(animated: true, completion: {
+                                    self?.delegate?.fusumaVideoCompleted(withFileURL: outputURL)
+                                })
                             }
                         default: break
                         }
@@ -412,6 +415,19 @@ public final class FusumaViewController: UIViewController {
         }
     }
     
+}
+
+extension FusumaViewController {
+    func cancelDownload() {
+        hud?.hide(animated: true)
+        if let requestID = requestVideoID {
+            imageManager.cancelImageRequest(requestID)
+        }
+    }
+    
+    func updateProgress(progress: Float) {
+        hud?.progress = progress
+    }
 }
 
 extension FusumaViewController: FSAlbumViewDelegate, FSCameraViewDelegate, FSVideoCameraViewDelegate {

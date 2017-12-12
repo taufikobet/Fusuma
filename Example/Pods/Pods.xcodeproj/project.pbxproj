@@ -7,195 +7,258 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0174B769599E5264AE5DB0EC9D8E92E7 /* Fusuma-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62129ACEDEB9FE8727B3E1B720AB242A /* Fusuma-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0860F18F2088DC3D498E8F363B448A6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B7078130327B4730E7F25E8561D013 /* Assets.xcassets */; };
-		0FCE6B56540C88E16335A0BF8B31ACB9 /* FSImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377A1DED8622AF778524CD4A1522DD1F /* FSImageCropView.swift */; };
-		13121E88DD84431A2D9407970A4A5025 /* Pods-FusumaExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25EB7481EB2D22C9612B778F958497C6 /* Pods-FusumaExample-dummy.m */; };
-		17620C17CE09A14CE801B535A427CD73 /* FSVideoCameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69C88C71A161575DE0963EABD6D4702E /* FSVideoCameraView.xib */; };
-		1FB63C8DE464786FBE96A07A2E9699A3 /* FSAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6D32D0C6D118E942BD6032C249F9A8 /* FSAlbumViewCell.swift */; };
-		33BE59320B600FEC0B987ACE28357730 /* Pods-FusumaExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B3CFAFDA5B268686989711FCF8535E /* Pods-FusumaExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		34CFB2FFE179C7002CC474C8B0C1FDFE /* Fusuma-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AE013DE1717F41BFAAAB764B50AE54C /* Fusuma-dummy.m */; };
-		34D616108D786A4A9B8B1A40DF307EF3 /* FSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2268A3489D4F9FA23A67748204C5F3E8 /* FSConstants.swift */; };
-		36C453A06FECB94232266AE7986EF119 /* FSAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7333E8AB84A9B1366336826C869F6D /* FSAlbumView.swift */; };
-		3D1214A594AED4A6ACE9ED080AF8FD5C /* MZTimerLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4293BEE661CA22B19594A101374A3A /* MZTimerLabel-dummy.m */; };
-		458D711B4FE4982C17C0C2A78BE7BE89 /* FusumaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CED8952DE2DFFA07B7DAB31D13A79F3 /* FusumaViewController.swift */; };
-		4A9B592F7EE2EBA1B90A0AAD119432CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D277CA270FC7E936EBE3948ACC5F6454 /* Foundation.framework */; };
-		4F80B61F987487D436169F294EEB2DD2 /* SDAVAssetExportSession.h in Headers */ = {isa = PBXBuildFile; fileRef = D5CEDBB10A3AF7F51E4996A5F6D90F32 /* SDAVAssetExportSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55D5010249FF257917F36AC06AFCAB9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D277CA270FC7E936EBE3948ACC5F6454 /* Foundation.framework */; };
-		607754C77D74CDF21160D4E5D86676BE /* MZTimerLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = E4EF8213C71187D9EBADEA193F618D1F /* MZTimerLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7512DA132B8F3CC23D6A6488CEDC3AE3 /* FusumaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180FA5897B813045006255D16EED6BB1 /* FusumaViewController.xib */; };
-		89F0A12817C9B74962FC3F6C92BE5E19 /* SDAVAssetExportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = A50A4F33093DEF6A26FFD2CA60DDC894 /* SDAVAssetExportSession.m */; };
-		8A2B86AF940025FDDCA6E2907A494219 /* MZTimerLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D826001EFE4597CB5D4439312DBC8250 /* MZTimerLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8EC5A4847A9A174CAB3FA02E19E9A061 /* FSCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF6C5DE2140EA1835ABEE27306336DD /* FSCameraView.swift */; };
-		95C426FB7211D4654D29BD4CDB8BAEF1 /* FSVideoCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB68A3050E42505712E655A3B650FC8 /* FSVideoCameraView.swift */; };
-		AE78BEDDFA92464FFB89A870E1048A30 /* FSAlbumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4EC057598AFB5E64EC215B831B0362 /* FSAlbumViewCell.xib */; };
-		B6B183C54664F15419F9143F049EBD1D /* FSCameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3516BB6C4FE2480484D9C26E78163442 /* FSCameraView.xib */; };
-		D2A5BF0390960523010144395CDA8572 /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B0149850998B501EFBD6CE5989BAD9 /* MZTimerLabel.m */; };
-		D4D82C8C71464A0B9B84883C52300C73 /* FSAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D10FDE269B388ABA049E8B35A2A97209 /* FSAlbumView.xib */; };
-		E3B32780945C70081E0B446F7B182364 /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3981BA287ED7C8CE1CBC0BFDF94984 /* CameraButton.swift */; };
-		EDEFF08B6C1EAC8B59276A3A22D3C3C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D277CA270FC7E936EBE3948ACC5F6454 /* Foundation.framework */; };
-		FDC9F8FA30E5D0D8A52E79A6B4DAD1C2 /* MZTimerLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F1B111E6E1660247B16A4115FBA39C /* MZTimerLabel.framework */; };
+		024B37EA4832EB004557A44DBA67C30E /* FSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC9A62EC3D786CA3C1552E260A53C1E /* FSConstants.swift */; };
+		02BFF13867FD37137A6F13AC35A1273D /* Fusuma-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD98C2B76E0A367BAC8D7D8FBCB2DDC5 /* Fusuma-dummy.m */; };
+		045F271058C4DF4E0543F31E723DBF80 /* MZTimerLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB14CF5041F3006A0910B61156B3F0F /* MZTimerLabel-dummy.m */; };
+		0DA16ADCAAE71891033876D1EBA831CF /* MZTimerLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = DB1A825E67100550F95902DB80642437 /* MZTimerLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DF8B3602CE7AD7B8F4E8EEC7D859DE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C61AA25997533FBB8033198648B46A /* Foundation.framework */; };
+		1F6AA979FD48EBC0F47B8EA700D8728E /* MZTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F1122023AFEA2BDC3DE65B521EFE7C97 /* MZTimerLabel.m */; };
+		212B9C69830909D3DAFBB5A104802766 /* FSAlbumViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D529A1462C83CA206392E219B3BB034 /* FSAlbumViewCell.swift */; };
+		279058ED432FB907117E334CCA127700 /* FSCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D25789C09D790EC92A279B56798C7B /* FSCameraView.swift */; };
+		2A5E3C9AF2AB9B35DF60BD983A405914 /* FusumaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE72DD0208CF5BC56B28226F70170EB1 /* FusumaViewController.xib */; };
+		3633AD3BC9EA36E2B1B1158E1CA23B92 /* SDAVAssetExportSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 450791294E9C434DC221421D7A80F030 /* SDAVAssetExportSession.m */; };
+		43290D41B2A9EFC99A328BEDC8702F0E /* FSAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015C58C84290C4E8C3C815B2526FC384 /* FSAlbumView.xib */; };
+		45440D44B86A0C490F76F387A18127C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C61AA25997533FBB8033198648B46A /* Foundation.framework */; };
+		4764B524BF8DE7342ABC45A8FF9DFCB1 /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F988CFBE166399521859D076449506 /* CameraButton.swift */; };
+		4F21D6B9156EB3EC027B9386BCA41ED8 /* MBProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C59FD2B409AF47D143B2582170C7D12 /* MBProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		528700980F9235143969D67BE4A9BC51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C61AA25997533FBB8033198648B46A /* Foundation.framework */; };
+		531BC878AE14D6670E115299CCFFCA5F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE386595946C578B0128B780EBD8D2A4 /* QuartzCore.framework */; };
+		55B8F7944423C117A8755F802EC10D0C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8355A3889DF47AC8F1E62068D2C3E1 /* MBProgressHUD.m */; };
+		60933E13D86A38052CFE8819F26AA87C /* FusumaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6CE06561B3005480BFEF76ECCB08734 /* FusumaViewController.swift */; };
+		7FAE03E7FFEC06D16B8FAB2D71015B99 /* FusumaExample-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = E1A4154302A203550D8A9D4D43FD3A01 /* FusumaExample-Bridging-Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A328461E9F87B6266022CEAC8FF15F2 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BA82F7E7547DC5F1B24684E0488242 /* MBProgressHUD.framework */; };
+		8CF123151BF3734E0715716BF749889A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB6293C78696C546D0A47552DC7F348 /* Assets.xcassets */; };
+		95D16E2E9E5EB1A28A7E7C3BB7FF261D /* MZTimerLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D1AF1F02FAEAC4144D967679EFFF90 /* MZTimerLabel.framework */; };
+		96DA94B01418D3147F41CC6D808CE7BE /* SDAVAssetExportSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 4006E944B8392A9ACC797291C89DBD02 /* SDAVAssetExportSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DD809A4763AC81DB54ACAAD80BD20A3 /* Pods-FusumaExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B3CFAFDA5B268686989711FCF8535E /* Pods-FusumaExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8F68CF428F9D67A52AA42DF757F4D47 /* FSVideoCameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 034D01882FB52D7CC6F699080E459834 /* FSVideoCameraView.xib */; };
+		A91BF431E97294B42CBD4F88D9F40768 /* FSImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E68062640D361B1E238EF90753DA13 /* FSImageCropView.swift */; };
+		AE50A0BBB02A593DB4326A09B26816AA /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE43740FB0051ECAAB1F0F972D4E46D5 /* MBProgressHUD-dummy.m */; };
+		B67761365C59C0DEE4C35B791845FC5C /* Pods-FusumaExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25EB7481EB2D22C9612B778F958497C6 /* Pods-FusumaExample-dummy.m */; };
+		BD4E2923B1D63350D939059EFCF47B83 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72578B232A0680021DD516FD6E610AEC /* CoreGraphics.framework */; };
+		C70DA14D618A7CE3ECC6C2F1186407A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C61AA25997533FBB8033198648B46A /* Foundation.framework */; };
+		D749E80480A98F825EE9895E3FC6C763 /* Fusuma-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9989798F80808C8ED2F649D9618A8649 /* Fusuma-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7A1A66A630044912C318557A85D65E0 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B43E4216D4BCB96052EE368E0A81AF0 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBFF811D96761550E16C08313779DA12 /* FSCameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5A3A4259775FA29CD893148C0973709 /* FSCameraView.xib */; };
+		E6C9E3F34FDAC47E64A1882BAAB48A04 /* MZTimerLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FC6A9E5C26DBC4DAB17C114C93D2169 /* MZTimerLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E822D75B2FBEC0360E41B1CDFE449336 /* FSVideoCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1B7056584250803D8B5F51E5B6E45C /* FSVideoCameraView.swift */; };
+		FAA0566E6E238D0D3FFED501FBCBB182 /* FSAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DA46AE4D45F88A69C430AC30E2C774 /* FSAlbumView.swift */; };
+		FB1FB4F7BCF5F2CAD2EDF6BD79EB805C /* FSAlbumViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7ABFF1A1161ADD97F295A21C1AA7704 /* FSAlbumViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		087F0A89B65C37FCF811CA9AD4DE2F22 /* PBXContainerItemProxy */ = {
+		7B05893661B2BF21AAB4287FDE0C752F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CB07627321C80C7FA7FF4373B7DA487E;
+			remoteGlobalIDString = F50FCD7663EB7C1FD294004B6FEDE76F;
+			remoteInfo = MBProgressHUD;
+		};
+		819945738DF4517A1BFFBB7F58B626F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28918D2BC8CC9B4E86C4D33ECD0F81DA;
 			remoteInfo = MZTimerLabel;
 		};
-		4112CB253831B92DD16063A16B14ADE7 /* PBXContainerItemProxy */ = {
+		DD6986B2A83E4DD3E8C4C64138F03817 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 23FD940F01C90CB12D194881D4BE59C2;
+			remoteGlobalIDString = 28918D2BC8CC9B4E86C4D33ECD0F81DA;
+			remoteInfo = MZTimerLabel;
+		};
+		E144EA3DF63589EAC81BCD6F69B92093 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CB6FDC7F5CDC08D3FAE6A645C7EB144;
 			remoteInfo = Fusuma;
 		};
-		CF1F0D745BC1BC4E2519FB0B89B1AC69 /* PBXContainerItemProxy */ = {
+		FB30FE5BEB46FE58D2C578752E8F02E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CB07627321C80C7FA7FF4373B7DA487E;
-			remoteInfo = MZTimerLabel;
+			remoteGlobalIDString = F50FCD7663EB7C1FD294004B6FEDE76F;
+			remoteInfo = MBProgressHUD;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08B0149850998B501EFBD6CE5989BAD9 /* MZTimerLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZTimerLabel.m; path = MZTimerLabel/MZTimerLabel.m; sourceTree = "<group>"; };
-		0A623FC599190A3E284E6AC114594C88 /* MZTimerLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MZTimerLabel-prefix.pch"; sourceTree = "<group>"; };
-		0BB68A3050E42505712E655A3B650FC8 /* FSVideoCameraView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSVideoCameraView.swift; path = Sources/FSVideoCameraView.swift; sourceTree = "<group>"; };
-		180FA5897B813045006255D16EED6BB1 /* FusumaViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FusumaViewController.xib; path = Sources/FusumaViewController.xib; sourceTree = "<group>"; };
-		2268A3489D4F9FA23A67748204C5F3E8 /* FSConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSConstants.swift; path = Sources/FSConstants.swift; sourceTree = "<group>"; };
+		015C58C84290C4E8C3C815B2526FC384 /* FSAlbumView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FSAlbumView.xib; path = Sources/FSAlbumView.xib; sourceTree = "<group>"; };
+		01C61AA25997533FBB8033198648B46A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		034D01882FB52D7CC6F699080E459834 /* FSVideoCameraView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FSVideoCameraView.xib; path = Sources/FSVideoCameraView.xib; sourceTree = "<group>"; };
+		0B43E4216D4BCB96052EE368E0A81AF0 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		0C59FD2B409AF47D143B2582170C7D12 /* MBProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		14F988CFBE166399521859D076449506 /* CameraButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraButton.swift; path = Sources/CameraButton.swift; sourceTree = "<group>"; };
+		1C27D8FF25EC120A1A46FA397E7C4BCB /* Fusuma.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Fusuma.modulemap; sourceTree = "<group>"; };
+		1CE9355536473A929FCD01DFD455B98D /* MZTimerLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MZTimerLabel-prefix.pch"; sourceTree = "<group>"; };
 		25EB7481EB2D22C9612B778F958497C6 /* Pods-FusumaExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FusumaExample-dummy.m"; sourceTree = "<group>"; };
-		280B9A06B2833A48AEF57E03B695E005 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3516BB6C4FE2480484D9C26E78163442 /* FSCameraView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FSCameraView.xib; path = Sources/FSCameraView.xib; sourceTree = "<group>"; };
-		377A1DED8622AF778524CD4A1522DD1F /* FSImageCropView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSImageCropView.swift; path = Sources/FSImageCropView.swift; sourceTree = "<group>"; };
+		2C8355A3889DF47AC8F1E62068D2C3E1 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		38B3CFAFDA5B268686989711FCF8535E /* Pods-FusumaExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FusumaExample-umbrella.h"; sourceTree = "<group>"; };
-		3AE013DE1717F41BFAAAB764B50AE54C /* Fusuma-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Fusuma-dummy.m"; sourceTree = "<group>"; };
+		3C1BAE2ACDFB68B38E0CEEF82264273E /* Fusuma-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Fusuma-prefix.pch"; sourceTree = "<group>"; };
+		3E0F3D8F35E755C98C6477539DA17EE4 /* Fusuma.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Fusuma.xcconfig; sourceTree = "<group>"; };
+		4006E944B8392A9ACC797291C89DBD02 /* SDAVAssetExportSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAVAssetExportSession.h; path = Sources/SDAVAssetExportSession.h; sourceTree = "<group>"; };
 		40F5E3E1D7398002B65EEDE4DBA36E82 /* Pods-FusumaExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FusumaExample-frameworks.sh"; sourceTree = "<group>"; };
-		4CED8952DE2DFFA07B7DAB31D13A79F3 /* FusumaViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FusumaViewController.swift; path = Sources/FusumaViewController.swift; sourceTree = "<group>"; };
-		52B7078130327B4730E7F25E8561D013 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Sources/Assets.xcassets; sourceTree = "<group>"; };
-		61ADD24DB671C64F2E7054E6C6A62F3F /* MZTimerLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MZTimerLabel.framework; path = MZTimerLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		62129ACEDEB9FE8727B3E1B720AB242A /* Fusuma-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Fusuma-umbrella.h"; sourceTree = "<group>"; };
-		69C88C71A161575DE0963EABD6D4702E /* FSVideoCameraView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FSVideoCameraView.xib; path = Sources/FSVideoCameraView.xib; sourceTree = "<group>"; };
+		427D3A69241E42308EFA8FB1A7F334CD /* MZTimerLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MZTimerLabel.framework; path = MZTimerLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		450791294E9C434DC221421D7A80F030 /* SDAVAssetExportSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAVAssetExportSession.m; path = Sources/SDAVAssetExportSession.m; sourceTree = "<group>"; };
+		4A1B7056584250803D8B5F51E5B6E45C /* FSVideoCameraView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSVideoCameraView.swift; path = Sources/FSVideoCameraView.swift; sourceTree = "<group>"; };
+		59BA82F7E7547DC5F1B24684E0488242 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D529A1462C83CA206392E219B3BB034 /* FSAlbumViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSAlbumViewCell.swift; path = Sources/FSAlbumViewCell.swift; sourceTree = "<group>"; };
+		6FC6A9E5C26DBC4DAB17C114C93D2169 /* MZTimerLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MZTimerLabel-umbrella.h"; sourceTree = "<group>"; };
+		72578B232A0680021DD516FD6E610AEC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		79DC91E90BA1E14F6DBE32FE022B6DB3 /* Pods-FusumaExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FusumaExample.debug.xcconfig"; sourceTree = "<group>"; };
-		7AF6C5DE2140EA1835ABEE27306336DD /* FSCameraView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSCameraView.swift; path = Sources/FSCameraView.swift; sourceTree = "<group>"; };
-		7F3D0B36F75326BB699062985126B79E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F7333E8AB84A9B1366336826C869F6D /* FSAlbumView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSAlbumView.swift; path = Sources/FSAlbumView.swift; sourceTree = "<group>"; };
 		807FB6DCF1AAAA77B4D5EDF1662DD7B8 /* Pods-FusumaExample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FusumaExample-resources.sh"; sourceTree = "<group>"; };
-		84F1B111E6E1660247B16A4115FBA39C /* MZTimerLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZTimerLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D4EC057598AFB5E64EC215B831B0362 /* FSAlbumViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FSAlbumViewCell.xib; path = Sources/FSAlbumViewCell.xib; sourceTree = "<group>"; };
+		82746EE92D80C92B61580F8D687C87AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86D25789C09D790EC92A279B56798C7B /* FSCameraView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSCameraView.swift; path = Sources/FSCameraView.swift; sourceTree = "<group>"; };
+		88561A23D8F8FA64590901101E856D0D /* MZTimerLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MZTimerLabel.modulemap; sourceTree = "<group>"; };
+		8AC9A62EC3D786CA3C1552E260A53C1E /* FSConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSConstants.swift; path = Sources/FSConstants.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97E68062640D361B1E238EF90753DA13 /* FSImageCropView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSImageCropView.swift; path = Sources/FSImageCropView.swift; sourceTree = "<group>"; };
+		9989798F80808C8ED2F649D9618A8649 /* Fusuma-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Fusuma-umbrella.h"; sourceTree = "<group>"; };
+		99E343EF1F4083A14ABF9D2CB4BD824B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AD7D1FF2C4F36E25897964E938D24FC /* Pods-FusumaExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FusumaExample.release.xcconfig"; sourceTree = "<group>"; };
-		A4BC495652F5CD5DA9815C4172286284 /* Fusuma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Fusuma.framework; path = Fusuma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A50A4F33093DEF6A26FFD2CA60DDC894 /* SDAVAssetExportSession.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAVAssetExportSession.m; path = Sources/SDAVAssetExportSession.m; sourceTree = "<group>"; };
-		A63B56F30078EE14C93B98A8AEA00F0F /* Fusuma.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Fusuma.xcconfig; sourceTree = "<group>"; };
+		9F647874286462D2C9282720A1324964 /* MZTimerLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MZTimerLabel.xcconfig; sourceTree = "<group>"; };
+		A12E0F70695860036B35D123B81326AC /* Pods_FusumaExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FusumaExample.framework; path = "Pods-FusumaExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE386595946C578B0128B780EBD8D2A4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		AF48213D4D0A364B82FBF537872B1F88 /* Pods-FusumaExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FusumaExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BA6D32D0C6D118E942BD6032C249F9A8 /* FSAlbumViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSAlbumViewCell.swift; path = Sources/FSAlbumViewCell.swift; sourceTree = "<group>"; };
+		B5A3A4259775FA29CD893148C0973709 /* FSCameraView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FSCameraView.xib; path = Sources/FSCameraView.xib; sourceTree = "<group>"; };
 		BDF68FC2A0EE2228E1C43C9C09F48408 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE4293BEE661CA22B19594A101374A3A /* MZTimerLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MZTimerLabel-dummy.m"; sourceTree = "<group>"; };
 		C1309C334D6C302BE7EFBD2B1F4139B3 /* Pods-FusumaExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FusumaExample-acknowledgements.plist"; sourceTree = "<group>"; };
+		C1DA46AE4D45F88A69C430AC30E2C774 /* FSAlbumView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FSAlbumView.swift; path = Sources/FSAlbumView.swift; sourceTree = "<group>"; };
+		C7ABFF1A1161ADD97F295A21C1AA7704 /* FSAlbumViewCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FSAlbumViewCell.xib; path = Sources/FSAlbumViewCell.xib; sourceTree = "<group>"; };
 		C7E73FD5F0FC08BB659AC976DE4A2C0E /* Pods-FusumaExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FusumaExample.modulemap"; sourceTree = "<group>"; };
-		D10FDE269B388ABA049E8B35A2A97209 /* FSAlbumView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FSAlbumView.xib; path = Sources/FSAlbumView.xib; sourceTree = "<group>"; };
-		D1EFCE120D358FA41F67A9D5C14B67C6 /* Fusuma-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Fusuma-prefix.pch"; sourceTree = "<group>"; };
-		D277CA270FC7E936EBE3948ACC5F6454 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D5CEDBB10A3AF7F51E4996A5F6D90F32 /* SDAVAssetExportSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAVAssetExportSession.h; path = Sources/SDAVAssetExportSession.h; sourceTree = "<group>"; };
-		D826001EFE4597CB5D4439312DBC8250 /* MZTimerLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MZTimerLabel-umbrella.h"; sourceTree = "<group>"; };
-		E4EF8213C71187D9EBADEA193F618D1F /* MZTimerLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZTimerLabel.h; path = MZTimerLabel/MZTimerLabel.h; sourceTree = "<group>"; };
-		F2F032CD89097E65EDEFD73115B97660 /* Pods_FusumaExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FusumaExample.framework; path = "Pods-FusumaExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F685F34A0C40C5B282C33E1A1589B8E8 /* MZTimerLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MZTimerLabel.modulemap; sourceTree = "<group>"; };
-		F6DD90FC51F05C4E9521E860D9E483B1 /* Fusuma.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Fusuma.modulemap; sourceTree = "<group>"; };
-		F7AF33C4E5C12686FA3D012BD4EECE18 /* MZTimerLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MZTimerLabel.xcconfig; sourceTree = "<group>"; };
-		FC3981BA287ED7C8CE1CBC0BFDF94984 /* CameraButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraButton.swift; path = Sources/CameraButton.swift; sourceTree = "<group>"; };
+		CD98C2B76E0A367BAC8D7D8FBCB2DDC5 /* Fusuma-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Fusuma-dummy.m"; sourceTree = "<group>"; };
+		D2D1AF1F02FAEAC4144D967679EFFF90 /* MZTimerLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MZTimerLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7E8F76E4C75436185A5B4EF1EFD44BF /* Fusuma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Fusuma.framework; path = Fusuma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB1A825E67100550F95902DB80642437 /* MZTimerLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MZTimerLabel.h; path = MZTimerLabel/MZTimerLabel.h; sourceTree = "<group>"; };
+		DE43740FB0051ECAAB1F0F972D4E46D5 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		DE72DD0208CF5BC56B28226F70170EB1 /* FusumaViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = FusumaViewController.xib; path = Sources/FusumaViewController.xib; sourceTree = "<group>"; };
+		E1A4154302A203550D8A9D4D43FD3A01 /* FusumaExample-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FusumaExample-Bridging-Header.h"; path = "Sources/FusumaExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		E28ADEE243D23F72485CB1AAAF8617AE /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
+		E6CE06561B3005480BFEF76ECCB08734 /* FusumaViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FusumaViewController.swift; path = Sources/FusumaViewController.swift; sourceTree = "<group>"; };
+		E96AC18C53DB9CC796572939C944112A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB6293C78696C546D0A47552DC7F348 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Sources/Assets.xcassets; sourceTree = "<group>"; };
+		F0B046839AD1EA10AFDB82313A3924E1 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		F1122023AFEA2BDC3DE65B521EFE7C97 /* MZTimerLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MZTimerLabel.m; path = MZTimerLabel/MZTimerLabel.m; sourceTree = "<group>"; };
+		F3AB402FB20D38FA0D8B0ADDAC2D7B9C /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBProgressHUD.framework; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA601FDD6DC4DCBAB38AA02A919BF694 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		FAB14CF5041F3006A0910B61156B3F0F /* MZTimerLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MZTimerLabel-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6B0E3123726F3C5C0ACDF9E3DAFB6418 /* Frameworks */ = {
+		5D4CD24C1350A944BCEFD0EA99B88525 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDEFF08B6C1EAC8B59276A3A22D3C3C1 /* Foundation.framework in Frameworks */,
-				FDC9F8FA30E5D0D8A52E79A6B4DAD1C2 /* MZTimerLabel.framework in Frameworks */,
+				45440D44B86A0C490F76F387A18127C0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		95A6B0FEDB4BD8B21CE38D41BE09C442 /* Frameworks */ = {
+		9DDCADA67F3657384E1254A3A116E651 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A9B592F7EE2EBA1B90A0AAD119432CA /* Foundation.framework in Frameworks */,
+				BD4E2923B1D63350D939059EFCF47B83 /* CoreGraphics.framework in Frameworks */,
+				C70DA14D618A7CE3ECC6C2F1186407A8 /* Foundation.framework in Frameworks */,
+				531BC878AE14D6670E115299CCFFCA5F /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C071A9B71D5A6D78336A2488479CAF13 /* Frameworks */ = {
+		C5D915D771906439F762E2AD67BDA226 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55D5010249FF257917F36AC06AFCAB9F /* Foundation.framework in Frameworks */,
+				0DF8B3602CE7AD7B8F4E8EEC7D859DE7 /* Foundation.framework in Frameworks */,
+				8A328461E9F87B6266022CEAC8FF15F2 /* MBProgressHUD.framework in Frameworks */,
+				95D16E2E9E5EB1A28A7E7C3BB7FF261D /* MZTimerLabel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE3BC20EC4539CF269FE70F2DF580267 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				528700980F9235143969D67BE4A9BC51 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1CAB68A34C59DCBD3762B0D4DC59DF09 /* MZTimerLabel */ = {
+		38CEB65C1406F6AF7CCA89FD0D7E8A97 /* Fusuma */ = {
 			isa = PBXGroup;
 			children = (
-				E4EF8213C71187D9EBADEA193F618D1F /* MZTimerLabel.h */,
-				08B0149850998B501EFBD6CE5989BAD9 /* MZTimerLabel.m */,
-				8A587D772F757609FB729307AD3328FF /* Support Files */,
+				14F988CFBE166399521859D076449506 /* CameraButton.swift */,
+				C1DA46AE4D45F88A69C430AC30E2C774 /* FSAlbumView.swift */,
+				6D529A1462C83CA206392E219B3BB034 /* FSAlbumViewCell.swift */,
+				86D25789C09D790EC92A279B56798C7B /* FSCameraView.swift */,
+				8AC9A62EC3D786CA3C1552E260A53C1E /* FSConstants.swift */,
+				97E68062640D361B1E238EF90753DA13 /* FSImageCropView.swift */,
+				4A1B7056584250803D8B5F51E5B6E45C /* FSVideoCameraView.swift */,
+				E1A4154302A203550D8A9D4D43FD3A01 /* FusumaExample-Bridging-Header.h */,
+				E6CE06561B3005480BFEF76ECCB08734 /* FusumaViewController.swift */,
+				4006E944B8392A9ACC797291C89DBD02 /* SDAVAssetExportSession.h */,
+				450791294E9C434DC221421D7A80F030 /* SDAVAssetExportSession.m */,
+				5D380F1B626C442B708755A3B83A25DC /* Resources */,
+				A4C2EA85681CE680A839828DF089C33F /* Support Files */,
 			);
-			name = MZTimerLabel;
-			path = MZTimerLabel;
+			name = Fusuma;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		1CB231C5293C86A120F4CC8C246A6CD2 /* Frameworks */ = {
+		3AD86F82487CC9261F71B60FC8AD9A7A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				84F1B111E6E1660247B16A4115FBA39C /* MZTimerLabel.framework */,
-				5D6E4EE8E25D4AEC2619132E7261E608 /* iOS */,
+				59BA82F7E7547DC5F1B24684E0488242 /* MBProgressHUD.framework */,
+				D2D1AF1F02FAEAC4144D967679EFFF90 /* MZTimerLabel.framework */,
+				52FAE1F4F4BECA6BA2424E7FB43187BB /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5389D8BEE4DBF51DE08AB943AF0BFC6B /* Resources */ = {
+		52FAE1F4F4BECA6BA2424E7FB43187BB /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				52B7078130327B4730E7F25E8561D013 /* Assets.xcassets */,
-				D10FDE269B388ABA049E8B35A2A97209 /* FSAlbumView.xib */,
-				8D4EC057598AFB5E64EC215B831B0362 /* FSAlbumViewCell.xib */,
-				3516BB6C4FE2480484D9C26E78163442 /* FSCameraView.xib */,
-				69C88C71A161575DE0963EABD6D4702E /* FSVideoCameraView.xib */,
-				180FA5897B813045006255D16EED6BB1 /* FusumaViewController.xib */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		5D6E4EE8E25D4AEC2619132E7261E608 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D277CA270FC7E936EBE3948ACC5F6454 /* Foundation.framework */,
+				72578B232A0680021DD516FD6E610AEC /* CoreGraphics.framework */,
+				01C61AA25997533FBB8033198648B46A /* Foundation.framework */,
+				AE386595946C578B0128B780EBD8D2A4 /* QuartzCore.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		65C47C1279A4B92BE6550361481A8554 /* Pods */ = {
+		5D380F1B626C442B708755A3B83A25DC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1CAB68A34C59DCBD3762B0D4DC59DF09 /* MZTimerLabel */,
+				EBB6293C78696C546D0A47552DC7F348 /* Assets.xcassets */,
+				015C58C84290C4E8C3C815B2526FC384 /* FSAlbumView.xib */,
+				C7ABFF1A1161ADD97F295A21C1AA7704 /* FSAlbumViewCell.xib */,
+				B5A3A4259775FA29CD893148C0973709 /* FSCameraView.xib */,
+				034D01882FB52D7CC6F699080E459834 /* FSVideoCameraView.xib */,
+				DE72DD0208CF5BC56B28226F70170EB1 /* FusumaViewController.xib */,
 			);
-			name = Pods;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		78A6BC45A076A4478E817F04F46172EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7E8F76E4C75436185A5B4EF1EFD44BF /* Fusuma.framework */,
+				F3AB402FB20D38FA0D8B0ADDAC2D7B9C /* MBProgressHUD.framework */,
+				427D3A69241E42308EFA8FB1A7F334CD /* MZTimerLabel.framework */,
+				A12E0F70695860036B35D123B81326AC /* Pods_FusumaExample.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				DFF615AA3B483B344462DD5A9DBD0F25 /* Development Pods */,
-				1CB231C5293C86A120F4CC8C246A6CD2 /* Frameworks */,
-				65C47C1279A4B92BE6550361481A8554 /* Pods */,
-				ADB8408E23D00298A34C4709AFE94D2C /* Products */,
+				A9FE6A55712A23240EE34D49FC6AB9F2 /* Development Pods */,
+				3AD86F82487CC9261F71B60FC8AD9A7A /* Frameworks */,
+				BB5F86B7DC158F10A3E03A12D86B6693 /* Pods */,
+				78A6BC45A076A4478E817F04F46172EE /* Products */,
 				82585CF47ABF0AB88A8EB297769D6005 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -208,62 +271,37 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		878464A703B420DC88E8E9A343D41CFF /* Support Files */ = {
+		8D3D30DFB69F04EBCE267DB44AC1A2FF /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				F6DD90FC51F05C4E9521E860D9E483B1 /* Fusuma.modulemap */,
-				A63B56F30078EE14C93B98A8AEA00F0F /* Fusuma.xcconfig */,
-				3AE013DE1717F41BFAAAB764B50AE54C /* Fusuma-dummy.m */,
-				D1EFCE120D358FA41F67A9D5C14B67C6 /* Fusuma-prefix.pch */,
-				62129ACEDEB9FE8727B3E1B720AB242A /* Fusuma-umbrella.h */,
-				280B9A06B2833A48AEF57E03B695E005 /* Info.plist */,
+				0B43E4216D4BCB96052EE368E0A81AF0 /* MBProgressHUD.h */,
+				2C8355A3889DF47AC8F1E62068D2C3E1 /* MBProgressHUD.m */,
+				BCCC1242DADDA8AECE6F01D876931CC2 /* Support Files */,
+			);
+			name = MBProgressHUD;
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		A4C2EA85681CE680A839828DF089C33F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C27D8FF25EC120A1A46FA397E7C4BCB /* Fusuma.modulemap */,
+				3E0F3D8F35E755C98C6477539DA17EE4 /* Fusuma.xcconfig */,
+				CD98C2B76E0A367BAC8D7D8FBCB2DDC5 /* Fusuma-dummy.m */,
+				3C1BAE2ACDFB68B38E0CEEF82264273E /* Fusuma-prefix.pch */,
+				9989798F80808C8ED2F649D9618A8649 /* Fusuma-umbrella.h */,
+				E96AC18C53DB9CC796572939C944112A /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/Fusuma";
 			sourceTree = "<group>";
 		};
-		8A587D772F757609FB729307AD3328FF /* Support Files */ = {
+		A9FE6A55712A23240EE34D49FC6AB9F2 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7F3D0B36F75326BB699062985126B79E /* Info.plist */,
-				F685F34A0C40C5B282C33E1A1589B8E8 /* MZTimerLabel.modulemap */,
-				F7AF33C4E5C12686FA3D012BD4EECE18 /* MZTimerLabel.xcconfig */,
-				BE4293BEE661CA22B19594A101374A3A /* MZTimerLabel-dummy.m */,
-				0A623FC599190A3E284E6AC114594C88 /* MZTimerLabel-prefix.pch */,
-				D826001EFE4597CB5D4439312DBC8250 /* MZTimerLabel-umbrella.h */,
+				38CEB65C1406F6AF7CCA89FD0D7E8A97 /* Fusuma */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MZTimerLabel";
-			sourceTree = "<group>";
-		};
-		ACC06655707D43CB1DCCD7948ACDECB5 /* Fusuma */ = {
-			isa = PBXGroup;
-			children = (
-				FC3981BA287ED7C8CE1CBC0BFDF94984 /* CameraButton.swift */,
-				7F7333E8AB84A9B1366336826C869F6D /* FSAlbumView.swift */,
-				BA6D32D0C6D118E942BD6032C249F9A8 /* FSAlbumViewCell.swift */,
-				7AF6C5DE2140EA1835ABEE27306336DD /* FSCameraView.swift */,
-				2268A3489D4F9FA23A67748204C5F3E8 /* FSConstants.swift */,
-				377A1DED8622AF778524CD4A1522DD1F /* FSImageCropView.swift */,
-				0BB68A3050E42505712E655A3B650FC8 /* FSVideoCameraView.swift */,
-				4CED8952DE2DFFA07B7DAB31D13A79F3 /* FusumaViewController.swift */,
-				D5CEDBB10A3AF7F51E4996A5F6D90F32 /* SDAVAssetExportSession.h */,
-				A50A4F33093DEF6A26FFD2CA60DDC894 /* SDAVAssetExportSession.m */,
-				5389D8BEE4DBF51DE08AB943AF0BFC6B /* Resources */,
-				878464A703B420DC88E8E9A343D41CFF /* Support Files */,
-			);
-			name = Fusuma;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		ADB8408E23D00298A34C4709AFE94D2C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A4BC495652F5CD5DA9815C4172286284 /* Fusuma.framework */,
-				61ADD24DB671C64F2E7054E6C6A62F3F /* MZTimerLabel.framework */,
-				F2F032CD89097E65EDEFD73115B97660 /* Pods_FusumaExample.framework */,
-			);
-			name = Products;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		B5B87091E796B56A7B19C7DA0ECF1A4F /* Pods-FusumaExample */ = {
@@ -284,91 +322,103 @@
 			path = "Target Support Files/Pods-FusumaExample";
 			sourceTree = "<group>";
 		};
-		DFF615AA3B483B344462DD5A9DBD0F25 /* Development Pods */ = {
+		BB5F86B7DC158F10A3E03A12D86B6693 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ACC06655707D43CB1DCCD7948ACDECB5 /* Fusuma */,
+				8D3D30DFB69F04EBCE267DB44AC1A2FF /* MBProgressHUD */,
+				F35B3B461F6904BB90C378F098527EAE /* MZTimerLabel */,
 			);
-			name = "Development Pods";
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BCCC1242DADDA8AECE6F01D876931CC2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				82746EE92D80C92B61580F8D687C87AF /* Info.plist */,
+				E28ADEE243D23F72485CB1AAAF8617AE /* MBProgressHUD.modulemap */,
+				FA601FDD6DC4DCBAB38AA02A919BF694 /* MBProgressHUD.xcconfig */,
+				DE43740FB0051ECAAB1F0F972D4E46D5 /* MBProgressHUD-dummy.m */,
+				F0B046839AD1EA10AFDB82313A3924E1 /* MBProgressHUD-prefix.pch */,
+				0C59FD2B409AF47D143B2582170C7D12 /* MBProgressHUD-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MBProgressHUD";
+			sourceTree = "<group>";
+		};
+		F2B419B005C87D941BA11833B43DF571 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				99E343EF1F4083A14ABF9D2CB4BD824B /* Info.plist */,
+				88561A23D8F8FA64590901101E856D0D /* MZTimerLabel.modulemap */,
+				9F647874286462D2C9282720A1324964 /* MZTimerLabel.xcconfig */,
+				FAB14CF5041F3006A0910B61156B3F0F /* MZTimerLabel-dummy.m */,
+				1CE9355536473A929FCD01DFD455B98D /* MZTimerLabel-prefix.pch */,
+				6FC6A9E5C26DBC4DAB17C114C93D2169 /* MZTimerLabel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MZTimerLabel";
+			sourceTree = "<group>";
+		};
+		F35B3B461F6904BB90C378F098527EAE /* MZTimerLabel */ = {
+			isa = PBXGroup;
+			children = (
+				DB1A825E67100550F95902DB80642437 /* MZTimerLabel.h */,
+				F1122023AFEA2BDC3DE65B521EFE7C97 /* MZTimerLabel.m */,
+				F2B419B005C87D941BA11833B43DF571 /* Support Files */,
+			);
+			name = MZTimerLabel;
+			path = MZTimerLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		18E6FC9A180EF9EB47FDD1BCA9DA10A8 /* Headers */ = {
+		3005B50D470D50D64C95778424CE4152 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A2B86AF940025FDDCA6E2907A494219 /* MZTimerLabel-umbrella.h in Headers */,
-				607754C77D74CDF21160D4E5D86676BE /* MZTimerLabel.h in Headers */,
+				D749E80480A98F825EE9895E3FC6C763 /* Fusuma-umbrella.h in Headers */,
+				7FAE03E7FFEC06D16B8FAB2D71015B99 /* FusumaExample-Bridging-Header.h in Headers */,
+				96DA94B01418D3147F41CC6D808CE7BE /* SDAVAssetExportSession.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59FB9529F68931E3BF57678BC6D99B5E /* Headers */ = {
+		56D8CF3E7F4EA81852D07294A7149276 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0174B769599E5264AE5DB0EC9D8E92E7 /* Fusuma-umbrella.h in Headers */,
-				4F80B61F987487D436169F294EEB2DD2 /* SDAVAssetExportSession.h in Headers */,
+				9DD809A4763AC81DB54ACAAD80BD20A3 /* Pods-FusumaExample-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7DA96F54980814C6677AA6C28617EB36 /* Headers */ = {
+		AC509AA906272370E7538E9C1A33B689 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33BE59320B600FEC0B987ACE28357730 /* Pods-FusumaExample-umbrella.h in Headers */,
+				4F21D6B9156EB3EC027B9386BCA41ED8 /* MBProgressHUD-umbrella.h in Headers */,
+				D7A1A66A630044912C318557A85D65E0 /* MBProgressHUD.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB6789E90BCE43744397A9564F81D32E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6C9E3F34FDAC47E64A1882BAAB48A04 /* MZTimerLabel-umbrella.h in Headers */,
+				0DA16ADCAAE71891033876D1EBA831CF /* MZTimerLabel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		23FD940F01C90CB12D194881D4BE59C2 /* Fusuma */ = {
+		28918D2BC8CC9B4E86C4D33ECD0F81DA /* MZTimerLabel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD15662CD6A34983204611F8372ED31A /* Build configuration list for PBXNativeTarget "Fusuma" */;
+			buildConfigurationList = 8FBA6B5A9C4D246076974D8D6B1F2044 /* Build configuration list for PBXNativeTarget "MZTimerLabel" */;
 			buildPhases = (
-				FEACCC071886ECA550A0A4A695827BA2 /* Sources */,
-				6B0E3123726F3C5C0ACDF9E3DAFB6418 /* Frameworks */,
-				59FB9529F68931E3BF57678BC6D99B5E /* Headers */,
-				B830E3167CDE630DCAA4F0E334E4F54D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4C7D7EB16D9BF196555C1B0F486E80A1 /* PBXTargetDependency */,
-			);
-			name = Fusuma;
-			productName = Fusuma;
-			productReference = A4BC495652F5CD5DA9815C4172286284 /* Fusuma.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		5648D777889200098EDFD3D8857A4ADA /* Pods-FusumaExample */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 247E82C5313AA7BA6A7466EA73A51700 /* Build configuration list for PBXNativeTarget "Pods-FusumaExample" */;
-			buildPhases = (
-				03B16437BBE2A1F5B73D4FFC2AE437FF /* Sources */,
-				C071A9B71D5A6D78336A2488479CAF13 /* Frameworks */,
-				7DA96F54980814C6677AA6C28617EB36 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				97218E36DFC5C15688497AD4E5F36CC3 /* PBXTargetDependency */,
-				721626168203143F49DF66D7A8898454 /* PBXTargetDependency */,
-			);
-			name = "Pods-FusumaExample";
-			productName = "Pods-FusumaExample";
-			productReference = F2F032CD89097E65EDEFD73115B97660 /* Pods_FusumaExample.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		CB07627321C80C7FA7FF4373B7DA487E /* MZTimerLabel */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 128A4B61668523E0990BB1577CED722C /* Build configuration list for PBXNativeTarget "MZTimerLabel" */;
-			buildPhases = (
-				74F2274E2A3F9AFB63A12A6654ECAF07 /* Sources */,
-				95A6B0FEDB4BD8B21CE38D41BE09C442 /* Frameworks */,
-				18E6FC9A180EF9EB47FDD1BCA9DA10A8 /* Headers */,
+				823994F174C730E3F7B97F043CA2446B /* Sources */,
+				5D4CD24C1350A944BCEFD0EA99B88525 /* Frameworks */,
+				FB6789E90BCE43744397A9564F81D32E /* Headers */,
 			);
 			buildRules = (
 			);
@@ -376,7 +426,64 @@
 			);
 			name = MZTimerLabel;
 			productName = MZTimerLabel;
-			productReference = 61ADD24DB671C64F2E7054E6C6A62F3F /* MZTimerLabel.framework */;
+			productReference = 427D3A69241E42308EFA8FB1A7F334CD /* MZTimerLabel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5CB6FDC7F5CDC08D3FAE6A645C7EB144 /* Fusuma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FCE4F0AB77CBCA9A309346846FAA5B0 /* Build configuration list for PBXNativeTarget "Fusuma" */;
+			buildPhases = (
+				DA60909353A1F20443B32007B71C5BF5 /* Sources */,
+				C5D915D771906439F762E2AD67BDA226 /* Frameworks */,
+				3005B50D470D50D64C95778424CE4152 /* Headers */,
+				939F7E1C5658A7F9B22B222573341DC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				085AD11A2B3D9CC5393D26B282B50D26 /* PBXTargetDependency */,
+				829DBE76EBBB206BCE6F434B68FAF031 /* PBXTargetDependency */,
+			);
+			name = Fusuma;
+			productName = Fusuma;
+			productReference = D7E8F76E4C75436185A5B4EF1EFD44BF /* Fusuma.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EDB44F51B55833E6FE2ACCA206533805 /* Pods-FusumaExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26E379BD24AFF56336F08F1992E5AE02 /* Build configuration list for PBXNativeTarget "Pods-FusumaExample" */;
+			buildPhases = (
+				86DC054392B9F22E218ABE95865A3A6D /* Sources */,
+				FE3BC20EC4539CF269FE70F2DF580267 /* Frameworks */,
+				56D8CF3E7F4EA81852D07294A7149276 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				472B826C9E79037752045755B1C17B2E /* PBXTargetDependency */,
+				7AF97D708D5834DE2BEE50A4174AF24D /* PBXTargetDependency */,
+				D80BB4DB52D5109BC86DB2871C792D08 /* PBXTargetDependency */,
+			);
+			name = "Pods-FusumaExample";
+			productName = "Pods-FusumaExample";
+			productReference = A12E0F70695860036B35D123B81326AC /* Pods_FusumaExample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F50FCD7663EB7C1FD294004B6FEDE76F /* MBProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65CA28F29A7AB204DE6A095DDDAAC91B /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
+			buildPhases = (
+				307F3AF3389FBD64349743AA0A445CB9 /* Sources */,
+				9DDCADA67F3657384E1254A3A116E651 /* Frameworks */,
+				AC509AA906272370E7538E9C1A33B689 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MBProgressHUD;
+			productName = MBProgressHUD;
+			productReference = F3AB402FB20D38FA0D8B0ADDAC2D7B9C /* MBProgressHUD.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -396,95 +503,117 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = ADB8408E23D00298A34C4709AFE94D2C /* Products */;
+			productRefGroup = 78A6BC45A076A4478E817F04F46172EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				23FD940F01C90CB12D194881D4BE59C2 /* Fusuma */,
-				CB07627321C80C7FA7FF4373B7DA487E /* MZTimerLabel */,
-				5648D777889200098EDFD3D8857A4ADA /* Pods-FusumaExample */,
+				5CB6FDC7F5CDC08D3FAE6A645C7EB144 /* Fusuma */,
+				F50FCD7663EB7C1FD294004B6FEDE76F /* MBProgressHUD */,
+				28918D2BC8CC9B4E86C4D33ECD0F81DA /* MZTimerLabel */,
+				EDB44F51B55833E6FE2ACCA206533805 /* Pods-FusumaExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B830E3167CDE630DCAA4F0E334E4F54D /* Resources */ = {
+		939F7E1C5658A7F9B22B222573341DC2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0860F18F2088DC3D498E8F363B448A6F /* Assets.xcassets in Resources */,
-				D4D82C8C71464A0B9B84883C52300C73 /* FSAlbumView.xib in Resources */,
-				AE78BEDDFA92464FFB89A870E1048A30 /* FSAlbumViewCell.xib in Resources */,
-				B6B183C54664F15419F9143F049EBD1D /* FSCameraView.xib in Resources */,
-				17620C17CE09A14CE801B535A427CD73 /* FSVideoCameraView.xib in Resources */,
-				7512DA132B8F3CC23D6A6488CEDC3AE3 /* FusumaViewController.xib in Resources */,
+				8CF123151BF3734E0715716BF749889A /* Assets.xcassets in Resources */,
+				43290D41B2A9EFC99A328BEDC8702F0E /* FSAlbumView.xib in Resources */,
+				FB1FB4F7BCF5F2CAD2EDF6BD79EB805C /* FSAlbumViewCell.xib in Resources */,
+				DBFF811D96761550E16C08313779DA12 /* FSCameraView.xib in Resources */,
+				A8F68CF428F9D67A52AA42DF757F4D47 /* FSVideoCameraView.xib in Resources */,
+				2A5E3C9AF2AB9B35DF60BD983A405914 /* FusumaViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		03B16437BBE2A1F5B73D4FFC2AE437FF /* Sources */ = {
+		307F3AF3389FBD64349743AA0A445CB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13121E88DD84431A2D9407970A4A5025 /* Pods-FusumaExample-dummy.m in Sources */,
+				AE50A0BBB02A593DB4326A09B26816AA /* MBProgressHUD-dummy.m in Sources */,
+				55B8F7944423C117A8755F802EC10D0C /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74F2274E2A3F9AFB63A12A6654ECAF07 /* Sources */ = {
+		823994F174C730E3F7B97F043CA2446B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D1214A594AED4A6ACE9ED080AF8FD5C /* MZTimerLabel-dummy.m in Sources */,
-				D2A5BF0390960523010144395CDA8572 /* MZTimerLabel.m in Sources */,
+				045F271058C4DF4E0543F31E723DBF80 /* MZTimerLabel-dummy.m in Sources */,
+				1F6AA979FD48EBC0F47B8EA700D8728E /* MZTimerLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FEACCC071886ECA550A0A4A695827BA2 /* Sources */ = {
+		86DC054392B9F22E218ABE95865A3A6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3B32780945C70081E0B446F7B182364 /* CameraButton.swift in Sources */,
-				36C453A06FECB94232266AE7986EF119 /* FSAlbumView.swift in Sources */,
-				1FB63C8DE464786FBE96A07A2E9699A3 /* FSAlbumViewCell.swift in Sources */,
-				8EC5A4847A9A174CAB3FA02E19E9A061 /* FSCameraView.swift in Sources */,
-				34D616108D786A4A9B8B1A40DF307EF3 /* FSConstants.swift in Sources */,
-				0FCE6B56540C88E16335A0BF8B31ACB9 /* FSImageCropView.swift in Sources */,
-				95C426FB7211D4654D29BD4CDB8BAEF1 /* FSVideoCameraView.swift in Sources */,
-				34CFB2FFE179C7002CC474C8B0C1FDFE /* Fusuma-dummy.m in Sources */,
-				458D711B4FE4982C17C0C2A78BE7BE89 /* FusumaViewController.swift in Sources */,
-				89F0A12817C9B74962FC3F6C92BE5E19 /* SDAVAssetExportSession.m in Sources */,
+				B67761365C59C0DEE4C35B791845FC5C /* Pods-FusumaExample-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA60909353A1F20443B32007B71C5BF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4764B524BF8DE7342ABC45A8FF9DFCB1 /* CameraButton.swift in Sources */,
+				FAA0566E6E238D0D3FFED501FBCBB182 /* FSAlbumView.swift in Sources */,
+				212B9C69830909D3DAFBB5A104802766 /* FSAlbumViewCell.swift in Sources */,
+				279058ED432FB907117E334CCA127700 /* FSCameraView.swift in Sources */,
+				024B37EA4832EB004557A44DBA67C30E /* FSConstants.swift in Sources */,
+				A91BF431E97294B42CBD4F88D9F40768 /* FSImageCropView.swift in Sources */,
+				E822D75B2FBEC0360E41B1CDFE449336 /* FSVideoCameraView.swift in Sources */,
+				02BFF13867FD37137A6F13AC35A1273D /* Fusuma-dummy.m in Sources */,
+				60933E13D86A38052CFE8819F26AA87C /* FusumaViewController.swift in Sources */,
+				3633AD3BC9EA36E2B1B1158E1CA23B92 /* SDAVAssetExportSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4C7D7EB16D9BF196555C1B0F486E80A1 /* PBXTargetDependency */ = {
+		085AD11A2B3D9CC5393D26B282B50D26 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = MZTimerLabel;
-			target = CB07627321C80C7FA7FF4373B7DA487E /* MZTimerLabel */;
-			targetProxy = CF1F0D745BC1BC4E2519FB0B89B1AC69 /* PBXContainerItemProxy */;
+			name = MBProgressHUD;
+			target = F50FCD7663EB7C1FD294004B6FEDE76F /* MBProgressHUD */;
+			targetProxy = FB30FE5BEB46FE58D2C578752E8F02E7 /* PBXContainerItemProxy */;
 		};
-		721626168203143F49DF66D7A8898454 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MZTimerLabel;
-			target = CB07627321C80C7FA7FF4373B7DA487E /* MZTimerLabel */;
-			targetProxy = 087F0A89B65C37FCF811CA9AD4DE2F22 /* PBXContainerItemProxy */;
-		};
-		97218E36DFC5C15688497AD4E5F36CC3 /* PBXTargetDependency */ = {
+		472B826C9E79037752045755B1C17B2E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Fusuma;
-			target = 23FD940F01C90CB12D194881D4BE59C2 /* Fusuma */;
-			targetProxy = 4112CB253831B92DD16063A16B14ADE7 /* PBXContainerItemProxy */;
+			target = 5CB6FDC7F5CDC08D3FAE6A645C7EB144 /* Fusuma */;
+			targetProxy = E144EA3DF63589EAC81BCD6F69B92093 /* PBXContainerItemProxy */;
+		};
+		7AF97D708D5834DE2BEE50A4174AF24D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = F50FCD7663EB7C1FD294004B6FEDE76F /* MBProgressHUD */;
+			targetProxy = 7B05893661B2BF21AAB4287FDE0C752F /* PBXContainerItemProxy */;
+		};
+		829DBE76EBBB206BCE6F434B68FAF031 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MZTimerLabel;
+			target = 28918D2BC8CC9B4E86C4D33ECD0F81DA /* MZTimerLabel */;
+			targetProxy = DD6986B2A83E4DD3E8C4C64138F03817 /* PBXContainerItemProxy */;
+		};
+		D80BB4DB52D5109BC86DB2871C792D08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MZTimerLabel;
+			target = 28918D2BC8CC9B4E86C4D33ECD0F81DA /* MZTimerLabel */;
+			targetProxy = 819945738DF4517A1BFFBB7F58B626F6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		43A289E5CE3BA529DD624C1D9ED22E20 /* Release */ = {
+		062800294175EB15B7020AF3A158478A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7AF33C4E5C12686FA3D012BD4EECE18 /* MZTimerLabel.xcconfig */;
+			baseConfigurationReference = 9F647874286462D2C9282720A1324964 /* MZTimerLabel.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -513,7 +642,101 @@
 			};
 			name = Release;
 		};
-		5884C3BD49CB8DA90514510EE9E26670 /* Release */ = {
+		0DA61C6EB69F117DB35183282808EFD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E0F3D8F35E755C98C6477539DA17EE4 /* Fusuma.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Fusuma/Fusuma-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Fusuma/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Fusuma/Fusuma.modulemap";
+				PRODUCT_NAME = Fusuma;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2796E07109A28B1778EE9542C67457E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E0F3D8F35E755C98C6477539DA17EE4 /* Fusuma.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Fusuma/Fusuma-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Fusuma/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Fusuma/Fusuma.modulemap";
+				PRODUCT_NAME = Fusuma;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		55CC0701F7E1088398685C48289743E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA601FDD6DC4DCBAB38AA02A919BF694 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
+				PRODUCT_NAME = MBProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5F164227F195583E689D74BC76FEC6EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9AD7D1FF2C4F36E25897964E938D24FC /* Pods-FusumaExample.release.xcconfig */;
 			buildSettings = {
@@ -547,9 +770,9 @@
 			};
 			name = Release;
 		};
-		9B174528AE0DC6293B645717FA55AABE /* Debug */ = {
+		7D7F4811371B8C3E5F0A14EF3B78AE8C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A63B56F30078EE14C93B98A8AEA00F0F /* Fusuma.xcconfig */;
+			baseConfigurationReference = 79DC91E90BA1E14F6DBE32FE022B6DB3 /* Pods-FusumaExample.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -560,17 +783,80 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Fusuma/Fusuma-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Fusuma/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-FusumaExample/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Fusuma/Fusuma.modulemap";
-				PRODUCT_NAME = Fusuma;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FusumaExample/Pods-FusumaExample.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FusumaExample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		82939B98E264F5FB9C084BE9738D091B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA601FDD6DC4DCBAB38AA02A919BF694 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBProgressHUD/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MBProgressHUD/MBProgressHUD.modulemap";
+				PRODUCT_NAME = MBProgressHUD;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		851BE76738DB3E9EF62BFC70FE8C059F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F647874286462D2C9282720A1324964 /* MZTimerLabel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MZTimerLabel/MZTimerLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MZTimerLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MZTimerLabel/MZTimerLabel.modulemap";
+				PRODUCT_NAME = MZTimerLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -632,102 +918,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
-		};
-		B256EA9558B4734F541EA1B978D2822C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A63B56F30078EE14C93B98A8AEA00F0F /* Fusuma.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Fusuma/Fusuma-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Fusuma/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Fusuma/Fusuma.modulemap";
-				PRODUCT_NAME = Fusuma;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BF1B7EC71C04A081E32C1CF3ED5D9FB8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7AF33C4E5C12686FA3D012BD4EECE18 /* MZTimerLabel.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MZTimerLabel/MZTimerLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MZTimerLabel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MZTimerLabel/MZTimerLabel.modulemap";
-				PRODUCT_NAME = MZTimerLabel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		CCE17D37C546733A5A9EC25BE7B1C1D3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79DC91E90BA1E14F6DBE32FE022B6DB3 /* Pods-FusumaExample.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-FusumaExample/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FusumaExample/Pods-FusumaExample.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_FusumaExample;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -792,20 +982,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		128A4B61668523E0990BB1577CED722C /* Build configuration list for PBXNativeTarget "MZTimerLabel" */ = {
+		26E379BD24AFF56336F08F1992E5AE02 /* Build configuration list for PBXNativeTarget "Pods-FusumaExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BF1B7EC71C04A081E32C1CF3ED5D9FB8 /* Debug */,
-				43A289E5CE3BA529DD624C1D9ED22E20 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		247E82C5313AA7BA6A7466EA73A51700 /* Build configuration list for PBXNativeTarget "Pods-FusumaExample" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CCE17D37C546733A5A9EC25BE7B1C1D3 /* Debug */,
-				5884C3BD49CB8DA90514510EE9E26670 /* Release */,
+				7D7F4811371B8C3E5F0A14EF3B78AE8C /* Debug */,
+				5F164227F195583E689D74BC76FEC6EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -819,11 +1000,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD15662CD6A34983204611F8372ED31A /* Build configuration list for PBXNativeTarget "Fusuma" */ = {
+		2FCE4F0AB77CBCA9A309346846FAA5B0 /* Build configuration list for PBXNativeTarget "Fusuma" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B174528AE0DC6293B645717FA55AABE /* Debug */,
-				B256EA9558B4734F541EA1B978D2822C /* Release */,
+				0DA61C6EB69F117DB35183282808EFD3 /* Debug */,
+				2796E07109A28B1778EE9542C67457E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65CA28F29A7AB204DE6A095DDDAAC91B /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82939B98E264F5FB9C084BE9738D091B /* Debug */,
+				55CC0701F7E1088398685C48289743E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FBA6B5A9C4D246076974D8D6B1F2044 /* Build configuration list for PBXNativeTarget "MZTimerLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				851BE76738DB3E9EF62BFC70FE8C059F /* Debug */,
+				062800294175EB15B7020AF3A158478A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
