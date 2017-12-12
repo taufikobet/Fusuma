@@ -146,39 +146,37 @@ final class FSVideoCameraView: UIView {
         }
         
         flashConfiguration()
-        setupMotionManager()
-        self.startCamera()
     }
     
     func setupMotionManager() {
         motionManager.deviceMotionUpdateInterval = 5.0
-        if motionManager.isAccelerometerAvailable{
+        if motionManager.isAccelerometerAvailable {
             let queue = OperationQueue.main
             motionManager.startAccelerometerUpdates(to: queue, withHandler: {
                 [weak self]  data, error in
                 
-                guard let data = data else{
+                guard let data = data else {
                     return
                 }
-                let angle = (atan2(data.acceleration.y,data.acceleration.x))*180/M_PI;                
-                if(fabs(angle)<=45){
+                
+                let angle = (atan2(data.acceleration.y,data.acceleration.x))*180/M_PI
+                
+                //print(angle)
+                
+                if (fabs(angle)<=45) {
                     self?.videoOrientation = .landscapeLeft
-                }else if((fabs(angle)>45)&&(fabs(angle)<135)){
-                    
+                }
+                else if ((fabs(angle)>45)&&(fabs(angle)<135)) {
                     if(angle>0){
                         self?.videoOrientation = .portraitUpsideDown
                     } else {
                         self?.videoOrientation = .portrait
                         
                     }
-                }else{
+                } else {
                     self?.videoOrientation = .landscapeRight
-                    
                 }
-                
-                }
-            )
-        } else {
+            })
         }
     }
     
@@ -194,9 +192,11 @@ final class FSVideoCameraView: UIView {
         if status == AVAuthorizationStatus.authorized {
             
             session?.startRunning()
+            setupMotionManager()
         } else if status == AVAuthorizationStatus.denied || status == AVAuthorizationStatus.restricted {
             
             session?.stopRunning()
+            stopMotionManager()
         }
     }
     
@@ -205,6 +205,7 @@ final class FSVideoCameraView: UIView {
             self.toggleRecording()
         }
         session?.stopRunning()
+        stopMotionManager()
     }
     
     @IBAction func shotButtonPressed(_ sender: UIButton) {
@@ -212,9 +213,13 @@ final class FSVideoCameraView: UIView {
         self.toggleRecording()
         
         if self.isRecording {
-            motionManager.stopDeviceMotionUpdates()
-            motionManager.stopAccelerometerUpdates()
+            stopMotionManager()
         }
+    }
+    
+    func stopMotionManager() {
+        motionManager.stopDeviceMotionUpdates()
+        motionManager.stopAccelerometerUpdates()
     }
 
     func startAnimatingRecordIndicator() {
