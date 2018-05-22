@@ -22,7 +22,9 @@ final class FSVideoCameraView: UIView {
     @IBOutlet weak var flashButton: UIButton!
     @IBOutlet weak var flipButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
-    @IBOutlet weak var recordIndicator: UIView! 
+    @IBOutlet weak var recordIndicator: UIView!
+    @IBOutlet weak var placeholderTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var timerLabelTopConstraint: NSLayoutConstraint!
 
     var mzTimerLabel:MZTimerLabel {
         return MZTimerLabel(label: timerLabel, andTimerType: MZTimerLabelTypeStopWatch)
@@ -146,6 +148,16 @@ final class FSVideoCameraView: UIView {
         }
         
         flashConfiguration()
+        
+        if #available(iOS 11.0, *) {
+            if let rootView = UIApplication.shared.keyWindow {
+                let topInset = rootView.safeAreaInsets.top
+                if topInset > 0 {
+                    placeholderTopConstraint.constant += topInset
+                    timerLabelTopConstraint.constant += topInset
+                }
+            }
+        }
     }
     
     func setupMotionManager() {

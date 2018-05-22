@@ -102,6 +102,11 @@ public final class FusumaViewController: UIViewController {
     @IBOutlet var libraryFirstConstraints: [NSLayoutConstraint]!
     @IBOutlet var cameraFirstConstraints: [NSLayoutConstraint]!
     
+    @IBOutlet var menuViewTopConstraints: NSLayoutConstraint!
+    @IBOutlet var menuViewHeightConstraints: NSLayoutConstraint!
+    @IBOutlet var libraryButtonBottomConstraints: NSLayoutConstraint!
+    @IBOutlet var cameraButtonBottomConstraints: NSLayoutConstraint!
+    
     lazy var albumView:FSAlbumView = {
         return FSAlbumView.instance(hasVideo: self.hasVideo)
     }()
@@ -141,7 +146,6 @@ public final class FusumaViewController: UIViewController {
         videoView.delegate = self
 
         menuView.backgroundColor = fusumaBackgroundColor
-        menuView.addBottomBorder(UIColor.black, width: 1.0)
         
         let bundle = Bundle(for: self.classForCoder)
         
@@ -245,6 +249,21 @@ public final class FusumaViewController: UIViewController {
         } else {
             cameraView.fullAspectRatioConstraint.isActive = true
             cameraView.croppedAspectRatioConstraint.isActive = false
+        }
+        
+        if #available(iOS 11.0, *) {
+            if let rootView = UIApplication.shared.keyWindow {
+                let topInset = rootView.safeAreaInsets.top
+                if topInset > 0 {
+                    menuViewHeightConstraints.constant += topInset
+                }
+                
+                let bottomInset = rootView.safeAreaInsets.bottom
+                if bottomInset > 0 {
+                    libraryButtonBottomConstraints.constant = bottomInset
+                    cameraButtonBottomConstraints.constant = bottomInset
+                }
+            }
         }
     }
     

@@ -16,6 +16,7 @@ import Photos
 
 final class FSAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, PHPhotoLibraryChangeObserver, UIGestureRecognizerDelegate {
     
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var imageCropView: FSImageCropView!
     @IBOutlet weak var imageCropViewContainer: UIView!
@@ -45,7 +46,7 @@ final class FSAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDel
         case up
         case down
     }
-    let imageCropViewOriginalConstraintTop: CGFloat = 50
+    var imageCropViewOriginalConstraintTop: CGFloat = 50
     let imageCropViewMinimalVisibleHeight: CGFloat  = 100
     var dragDirection = Direction.up
     var imaginaryCollectionViewOffsetStartPosY: CGFloat = 0.0
@@ -75,8 +76,18 @@ final class FSAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDel
         panGesture.delegate = self
         self.addGestureRecognizer(panGesture)
         
+        if #available(iOS 11.0, *) {
+            if let rootView = UIApplication.shared.keyWindow {
+                let topInset = rootView.safeAreaInsets.top
+                if topInset > 0 {
+                    imageCropViewOriginalConstraintTop += topInset
+                }
+            }
+        }
+        
         collectionViewConstraintHeight.constant = self.frame.height - imageCropView.frame.height - imageCropViewOriginalConstraintTop
-        imageCropViewConstraintTop.constant = 50
+
+        imageCropViewConstraintTop.constant = imageCropViewOriginalConstraintTop
         dragDirection = Direction.up
         
         imageCropViewContainer.layer.shadowColor   = UIColor.black.cgColor
@@ -86,6 +97,7 @@ final class FSAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDel
         
         collectionView.register(UINib(nibName: "FSAlbumViewCell", bundle: Bundle(for: self.classForCoder)), forCellWithReuseIdentifier: "FSAlbumViewCell")
         collectionView.backgroundColor = fusumaBackgroundColor
+        self.backgroundView.backgroundColor = fusumaBackgroundColor
         
         // Never load photos Unless the user allows to access to photo album
         checkPhotoAuth()

@@ -21,6 +21,7 @@ final class FSCameraView: UIView, UIGestureRecognizerDelegate {
     @IBOutlet weak var flipButton: UIButton!
     @IBOutlet weak var croppedAspectRatioConstraint: NSLayoutConstraint!
     @IBOutlet weak var fullAspectRatioConstraint: NSLayoutConstraint!
+    @IBOutlet weak var previewContainerTopConstraint: NSLayoutConstraint!
     
     weak var delegate: FSCameraViewDelegate? = nil
     
@@ -125,6 +126,15 @@ final class FSCameraView: UIView, UIGestureRecognizerDelegate {
         self.startCamera()
         
         NotificationCenter.default.addObserver(self, selector: #selector(FSCameraView.willEnterForegroundNotification(_:)), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+        
+        if #available(iOS 11.0, *) {
+            if let rootView = UIApplication.shared.keyWindow {
+                let topInset = rootView.safeAreaInsets.top
+                if topInset > 0 {
+                    previewContainerTopConstraint.constant += topInset
+                }
+            }
+        }
     }
     
     func willEnterForegroundNotification(_ notification: Notification) {

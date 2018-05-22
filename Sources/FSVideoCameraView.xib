@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -130,10 +130,12 @@
             <connections>
                 <outlet property="flashButton" destination="yHq-QZ-jPz" id="umV-Ve-W2b"/>
                 <outlet property="flipButton" destination="oPV-fC-75T" id="J96-fz-NnG"/>
+                <outlet property="placeholderTopConstraint" destination="oaX-Fc-nnw" id="kJH-1B-oWW"/>
                 <outlet property="previewViewContainer" destination="0hK-pW-0DW" id="8bh-3S-jSb"/>
                 <outlet property="recordIndicator" destination="Tq3-1A-M3n" id="gwQ-8b-yn0"/>
                 <outlet property="shotButton" destination="cpy-ro-bt6" id="SbF-vE-c2o"/>
                 <outlet property="timerLabel" destination="czY-Rv-cHn" id="JGG-Pu-UlD"/>
+                <outlet property="timerLabelTopConstraint" destination="nDp-mo-5Zm" id="m7i-Mn-dMJ"/>
             </connections>
             <point key="canvasLocation" x="519" y="448"/>
         </view>
