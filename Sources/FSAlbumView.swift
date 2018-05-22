@@ -63,6 +63,20 @@ final class FSAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDel
         return albumView
     }
     
+    public override func safeAreaInsetsDidChange() {
+        if #available(iOS 11.0, *) {
+            super.safeAreaInsetsDidChange()
+            let topInset = self.safeAreaInsets.top
+            if topInset > 0 {
+                imageCropViewOriginalConstraintTop += topInset
+                
+                collectionViewConstraintHeight.constant = self.frame.height - imageCropView.frame.height - imageCropViewOriginalConstraintTop
+                
+                imageCropViewConstraintTop.constant = imageCropViewOriginalConstraintTop
+            }
+        }
+    }
+    
     func initialize() {
         
         if images != nil {
@@ -75,15 +89,6 @@ final class FSAlbumView: UIView, UICollectionViewDataSource, UICollectionViewDel
         let panGesture      = UIPanGestureRecognizer(target: self, action: #selector(FSAlbumView.panned(_:)))
         panGesture.delegate = self
         self.addGestureRecognizer(panGesture)
-        
-        if #available(iOS 11.0, *) {
-            if let rootView = UIApplication.shared.keyWindow {
-                let topInset = rootView.safeAreaInsets.top
-                if topInset > 0 {
-                    imageCropViewOriginalConstraintTop += topInset
-                }
-            }
-        }
         
         collectionViewConstraintHeight.constant = self.frame.height - imageCropView.frame.height - imageCropViewOriginalConstraintTop
 

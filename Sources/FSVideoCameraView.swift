@@ -147,18 +147,20 @@ final class FSVideoCameraView: UIView {
             flipButton.setImage(flipImage, for: UIControlState())
         }
         
-        flashConfiguration()
-        
+        flashConfiguration()        
+    }
+    
+    public override func safeAreaInsetsDidChange() {
         if #available(iOS 11.0, *) {
-            if let rootView = UIApplication.shared.keyWindow {
-                let topInset = rootView.safeAreaInsets.top
-                if topInset > 0 {
-                    placeholderTopConstraint.constant += topInset
-                    timerLabelTopConstraint.constant += topInset
-                }
+            super.safeAreaInsetsDidChange()
+            let topInset = self.safeAreaInsets.top
+            if topInset > 0 {
+                placeholderTopConstraint.constant += topInset
+                timerLabelTopConstraint.constant += topInset
             }
         }
     }
+
     
     func setupMotionManager() {
         motionManager.deviceMotionUpdateInterval = 5.0

@@ -127,15 +127,18 @@ final class FSCameraView: UIView, UIGestureRecognizerDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(FSCameraView.willEnterForegroundNotification(_:)), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
         
+    }
+    
+    public override func safeAreaInsetsDidChange() {
         if #available(iOS 11.0, *) {
-            if let rootView = UIApplication.shared.keyWindow {
-                let topInset = rootView.safeAreaInsets.top
-                if topInset > 0 {
-                    previewContainerTopConstraint.constant += topInset
-                }
+            super.safeAreaInsetsDidChange()
+            let topInset = self.safeAreaInsets.top
+            if topInset > 0 {
+                previewContainerTopConstraint.constant += topInset
             }
         }
     }
+
     
     func willEnterForegroundNotification(_ notification: Notification) {
         

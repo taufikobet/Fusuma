@@ -251,19 +251,24 @@ public final class FusumaViewController: UIViewController {
             cameraView.croppedAspectRatioConstraint.isActive = false
         }
         
+    }
+    
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
         if #available(iOS 11.0, *) {
-            if let rootView = UIApplication.shared.keyWindow {
-                let topInset = rootView.safeAreaInsets.top
-                if topInset > 0 {
-                    menuViewHeightConstraints.constant += topInset
-                }
-                
-                let bottomInset = rootView.safeAreaInsets.bottom
-                if bottomInset > 0 {
-                    libraryButtonBottomConstraints.constant = bottomInset
-                    cameraButtonBottomConstraints.constant = bottomInset
-                }
+            
+            let topInset = self.view.safeAreaInsets.top
+            if topInset > 0 {
+                menuViewHeightConstraints.constant = 64 + topInset
             }
+            
+            let bottomInset = self.view.safeAreaInsets.bottom
+            if bottomInset > 0 {
+                libraryButtonBottomConstraints.constant = bottomInset
+                cameraButtonBottomConstraints.constant = bottomInset
+            }
+            
         }
     }
     
