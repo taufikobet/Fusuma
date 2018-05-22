@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'Sources/**/*.{h,m,swift}'
   s.resources    = ['Sources/Assets.xcassets', 'Sources/**/*.xib']
+  s.pod_target_xcconfig = {"APPLICATION_EXTENSION_API_ONLY": "NO"}
   s.dependency 'MZTimerLabel'
   s.dependency 'MBProgressHUD'
 end
