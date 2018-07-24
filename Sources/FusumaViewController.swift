@@ -330,8 +330,7 @@ public final class FusumaViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {
-
-        if self.albumView.phAsset.mediaType == .video {
+        if let asset = self.albumView.phAsset, asset.mediaType == .video {
 
             options.isNetworkAccessAllowed = true
             options.version = .current
@@ -358,7 +357,7 @@ public final class FusumaViewController: UIViewController {
                 }
             }
             
-            requestVideoID = imageManager.requestExportSession(forVideo: self.albumView.phAsset, options: options, exportPreset: AVAssetExportPresetPassthrough, resultHandler: { [weak self] (session, dict) in
+            requestVideoID = imageManager.requestExportSession(forVideo: asset, options: options, exportPreset: AVAssetExportPresetPassthrough, resultHandler: { [weak self] (session, dict) in
                 
                 guard let session = session else { return }
                 
@@ -387,7 +386,7 @@ public final class FusumaViewController: UIViewController {
                     }
                 })
             })
-        } else {
+        } else if let asset = self.albumView.phAsset {
             let view = albumView.imageCropView
 
             if fusumaCropImage {
@@ -407,13 +406,13 @@ public final class FusumaViewController: UIViewController {
                     options.normalizedCropRect = cropRect
                     //options.resizeMode = .exact
 
-                    let targetWidth = floor(CGFloat(self.albumView.phAsset.pixelWidth) * cropRect.width)
-                    let targetHeight = floor(CGFloat(self.albumView.phAsset.pixelHeight) * cropRect.height)
+                    let targetWidth = floor(CGFloat(asset.pixelWidth) * cropRect.width)
+                    let targetHeight = floor(CGFloat(asset.pixelHeight) * cropRect.height)
                     let dimension = max(min(targetHeight, targetWidth), 1024 * UIScreen.main.scale)
 
                     let targetSize = CGSize(width: dimension, height: dimension)
 
-                    PHImageManager.default().requestImage(for: self.albumView.phAsset, targetSize: targetSize,
+                    PHImageManager.default().requestImage(for: asset, targetSize: targetSize,
                                                           contentMode: .aspectFill, options: options) {
                                                             result, info in
 
