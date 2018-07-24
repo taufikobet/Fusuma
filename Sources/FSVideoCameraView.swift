@@ -26,9 +26,7 @@ final class FSVideoCameraView: UIView {
     @IBOutlet weak var placeholderTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var timerLabelTopConstraint: NSLayoutConstraint!
 
-    var mzTimerLabel:MZTimerLabel {
-        return MZTimerLabel(label: timerLabel, andTimerType: MZTimerLabelTypeStopWatch)
-    }
+    lazy var mzTimerLabel:MZTimerLabel = MZTimerLabel(label: self.timerLabel, andTimerType: MZTimerLabelTypeStopWatch)
     
     weak var delegate: FSVideoCameraViewDelegate? = nil
     
