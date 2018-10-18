@@ -158,7 +158,6 @@
 				52412ABD1CA61C9F0073C4BE /* Frameworks */,
 				52412ABE1CA61C9F0073C4BE /* Resources */,
 				B455A74F06DEB700F808E20F /* [CP] Embed Pods Frameworks */,
-				55EDE0D6F76DED22857B8D1A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,7 +181,7 @@
 					52412ABF1CA61C9F0073C4BE = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 599SL32HL9;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -224,21 +223,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		55EDE0D6F76DED22857B8D1A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FusumaExample/Pods-FusumaExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B455A74F06DEB700F808E20F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,7 +412,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "../Sources/FusumaExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -444,7 +429,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.ytakzk.FusumaExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "../Sources/FusumaExample-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

@@ -20,6 +20,9 @@
     "Sources/Assets.xcassets",
     "Sources/**/*.xib"
   ],
+  "pod_target_xcconfig": {
+    "APPLICATION_EXTENSION_API_ONLY": "NO"
+  },
   "dependencies": {
     "MZTimerLabel": [
 
